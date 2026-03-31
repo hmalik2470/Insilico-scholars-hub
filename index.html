@@ -768,29 +768,39 @@
     <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
       
       <!-- Service Card 1: MD Simulation -->
-      <div class="glass-card rounded-2xl p-6 reveal hover:shadow-lg hover:shadow-brand-500/10 transition-all duration-300">
-        <div class="flex items-center gap-3 mb-4">
-          <div class="analysis-icon">
-            <span class="iconify" data-icon="mdi:timer-sand"></span>
-          </div>
-          <h3 class="text-lg font-semibold text-white">MD Simulation (up to 500ns)</h3>
-        </div>
-        
-        <!-- YOUR IMAGE HERE: Replace src with your actual simulation trajectory/preview image -->
-        <div class="mb-4 rounded-lg overflow-hidden border border-brand-600/20 bg-brand-950/30 aspect-video flex items-center justify-center">
-          <img src="images/analysis/md_simulation_preview.png" 
-               alt="MD Simulation Preview" 
-               class="w-full h-full object-cover opacity-90 hover:opacity-100 transition-opacity"
-               onerror="this.parentElement.innerHTML='<span class=\'text-xs text-slate-500\'>Image: md_simulation_preview.png</span>'">
-        </div>
-        
-        <p class="text-sm text-slate-400 leading-relaxed mb-4">
-          Full production-run molecular dynamics simulation using GROMACS with proper equilibration, minimization, and production phases up to 500 nanoseconds.
-        </p>
-        <div class="pt-3 border-t border-white/5">
-          <span class="text-xs font-mono text-brand-400/60">GROMACS • .xtc • .trr • .gro</span>
-        </div>
-      </div>
+      <!-- Service Card: MD Simulation Video (NEW) -->
+<div class="glass-card rounded-2xl p-1 reveal hover:shadow-lg hover:shadow-brand-500/10 transition-all duration-300 lg:col-span-2">
+  <div class="flex items-center gap-3 mb-4">
+    <div class="analysis-icon">
+      <span class="iconify" data-icon="mdi:play-circle-outline"></span>
+    </div>
+    <h3 class="text-lg font-semibold text-white">Live MD Simulation Preview</h3>
+  </div>
+  
+  <!-- Video Container -->
+  <div class="relative rounded-xl overflow-hidden gradient-border bg-brand-950/30 aspect-video group">
+    <video 
+      class="w-full h-full object-cover"
+      src="videos/simulation.mp4" 
+      autoplay 
+      loop 
+      muted 
+      playsinline
+      poster="images/video-poster.jpg">
+      Your browser does not support the video tag.
+    </video>
+    
+    <!-- Quality Badge -->
+    <div class="absolute top-4 right-4 px-3 py-1 rounded-full bg-black/60 backdrop-blur-sm border border-white/10">
+      <span class="text-[10px] font-mono text-brand-300 uppercase tracking-wider">GROMACS • 500ns</span>
+    </div>
+  </div>
+  
+  <p class="text-sm text-slate-400 leading-relaxed mt-4">
+    Watch a real-time visualization of protein dynamics. This 500ns simulation demonstrates 
+    conformational changes, binding stability, and molecular interactions.
+  </p>
+</div>
 
       <!-- Service Card 2: RMSD / RMSF Analysis -->
       <div class="glass-card rounded-2xl p-6 reveal delay-100 hover:shadow-lg hover:shadow-emerald-500/10 transition-all duration-300">
