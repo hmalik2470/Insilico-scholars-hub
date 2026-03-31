@@ -71,6 +71,15 @@
       50% { transform: translate(-5px, -40px) scale(0.8); opacity: 0.4; }
       75% { transform: translate(15px, -20px) scale(1.1); opacity: 0.5; }
     }
+    @keyframes kenBurns {
+      0% { transform: scale(1) translate(0, 0); }
+      50% { transform: scale(1.08) translate(-2%, 1%); }
+      100% { transform: scale(1) translate(0, 0); }
+    }
+    @keyframes progressFill {
+      from { width: 0%; }
+      to { width: 100%; }
+    }
 
     .animate-fade-up { animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards; opacity: 0; }
     .animate-fade-in { animation: fadeIn 1s ease forwards; opacity: 0; }
@@ -92,9 +101,7 @@
       -webkit-text-fill-color: transparent;
       background-clip: text;
     }
-    .gradient-border {
-      position: relative;
-    }
+    .gradient-border { position: relative; }
     .gradient-border::before {
       content: '';
       position: absolute;
@@ -163,7 +170,7 @@
     }
 
     .molecular-grid {
-      background-image: 
+      background-image:
         linear-gradient(rgba(26,109,245,0.05) 1px, transparent 1px),
         linear-gradient(90deg, rgba(26,109,245,0.05) 1px, transparent 1px);
       background-size: 60px 60px;
@@ -247,10 +254,7 @@
       z-index: 9999;
       backdrop-filter: blur(10px);
     }
-    .toast.show {
-      transform: translateY(0);
-      opacity: 1;
-    }
+    .toast.show { transform: translateY(0); opacity: 1; }
 
     .mobile-menu {
       position: fixed;
@@ -268,10 +272,7 @@
       transform: translateY(30px);
       transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
     }
-    .reveal.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
 
     .analysis-icon {
       width: 56px;
@@ -307,11 +308,7 @@
     .form-input::placeholder { color: #475569; }
     textarea.form-input { resize: vertical; min-height: 120px; }
 
-    .sliding-bg-wrapper {
-      position: absolute;
-      inset: 0;
-      overflow: hidden;
-    }
+    .sliding-bg-wrapper { position: absolute; inset: 0; overflow: hidden; }
     .sliding-bg-slide {
       position: absolute;
       inset: 0;
@@ -323,15 +320,8 @@
       transform: scale(1);
       animation: kenBurns 20s ease-in-out infinite alternate;
     }
-    .sliding-bg-slide.active {
-      opacity: 1;
-      z-index: 1;
-    }
-    @keyframes kenBurns {
-      0% { transform: scale(1) translate(0, 0); }
-      50% { transform: scale(1.08) translate(-2%, 1%); }
-      100% { transform: scale(1) translate(0, 0); }
-    }
+    .sliding-bg-slide.active { opacity: 1; z-index: 1; }
+
     .slide-dot {
       width: 10px;
       height: 10px;
@@ -342,22 +332,13 @@
       transition: all 0.3s ease;
       padding: 0;
     }
-    .slide-dot:hover {
-      background: rgba(255,255,255,0.6);
-      transform: scale(1.2);
-    }
+    .slide-dot:hover { background: rgba(255,255,255,0.6); transform: scale(1.2); }
     .slide-dot.active {
       background: #338dff;
       border-color: #338dff;
       box-shadow: 0 0 0 3px rgba(26,109,245,0.3);
     }
-    @keyframes progressFill {
-      from { width: 0%; }
-      to { width: 100%; }
-    }
-    .slide-progress {
-      animation: progressFill 8s linear forwards;
-    }
+    .slide-progress { animation: progressFill 8s linear forwards; }
 
     .team-card { text-align: center; padding: 32px 24px; }
     .team-avatar {
@@ -381,12 +362,7 @@
       background: linear-gradient(135deg, #1a6df5, #59b0ff, #1a6df5);
       z-index: -1;
     }
-    .team-avatar img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      border-radius: 50%;
-    }
+    .team-avatar img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; }
 
     @media (max-width: 768px) {
       .sliding-bg-slide { animation-duration: 15s; }
@@ -397,7 +373,7 @@
 </head>
 <body class="molecular-grid">
 
-  <!-- ===== NAVBAR ===== -->
+  <!-- ==================== NAVBAR ==================== -->
   <nav class="navbar fixed top-0 left-0 right-0 z-50">
     <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
       <a href="#home" class="flex items-center gap-3 group">
@@ -424,7 +400,7 @@
     </div>
   </nav>
 
-  <!-- Mobile Menu -->
+  <!-- ==================== MOBILE MENU ==================== -->
   <div class="mobile-menu" id="mobileMenu">
     <div class="flex flex-col items-center justify-center h-full gap-8">
       <a href="#home" class="text-2xl font-semibold text-white mobile-link">Home</a>
@@ -437,7 +413,7 @@
     </div>
   </div>
 
-   <!-- ===== HERO ===== -->
+  <!-- ==================== HERO ==================== -->
   <section id="home" class="hero-bg min-h-screen flex items-center pt-16 relative">
     <div class="particle" style="top:20%; left:10%; animation: particle-float 8s ease-in-out infinite;"></div>
     <div class="particle" style="top:40%; left:80%; animation: particle-float 10s ease-in-out infinite 2s; width:6px; height:6px;"></div>
@@ -462,8 +438,8 @@
             <span class="text-white">Services</span>
           </h1>
           <p class="text-lg text-slate-400 font-light leading-relaxed mb-10 max-w-lg animate-fade-up delay-200">
-            Up to <span class="text-white font-medium">500ns</span> molecular dynamics simulations with 
-            <span class="text-white font-medium">publication-ready</span> analysis. Delivered in just 
+            Up to <span class="text-white font-medium">500ns</span> molecular dynamics simulations with
+            <span class="text-white font-medium">publication-ready</span> analysis. Delivered in just
             <span class="text-brand-400 font-medium">10 days</span>.
           </p>
           <div class="flex flex-wrap gap-4 animate-fade-up delay-300">
@@ -491,20 +467,13 @@
         <!-- Right: Full-Space Photo Slider -->
         <div class="hidden md:block animate-fade-up delay-300">
           <div class="relative w-full h-full min-h-[500px] rounded-2xl overflow-hidden">
-
-            <!-- Background Glow -->
             <div class="absolute -inset-10 bg-brand-600/10 rounded-full blur-[80px] pointer-events-none"></div>
 
             <!-- Photo 1 -->
             <div class="hero-slide absolute inset-0 transition-all duration-[1400ms] ease-[cubic-bezier(0.65,0,0.35,1)] opacity-100 translate-x-0 scale-100" data-slide="0">
-              <img src="images/pic_1.jpg" 
-                   alt="MD Simulation Workspace" 
-                   class="w-full h-full object-cover"
-                   onerror="this.src='https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=800&h=1000&fit=crop'">
-              <!-- Overlays -->
+              <img src="images/pic_1.jpg" alt="MD Simulation Workspace" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=800&h=1000&fit=crop'">
               <div class="absolute inset-0 bg-gradient-to-t from-[#0a0e1a]/90 via-[#0a0e1a]/20 to-[#0a0e1a]/40"></div>
               <div class="absolute inset-0 bg-gradient-to-l from-transparent to-[#0a0e1a]/30"></div>
-              <!-- Label -->
               <div class="absolute bottom-8 left-8 right-8">
                 <div class="px-5 py-4 rounded-xl bg-black/40 backdrop-blur-xl border border-white/10">
                   <div class="text-[10px] font-mono text-brand-300 uppercase tracking-widest mb-1.5">Computational Biology</div>
@@ -516,14 +485,9 @@
 
             <!-- Photo 2 -->
             <div class="hero-slide absolute inset-0 transition-all duration-[1400ms] ease-[cubic-bezier(0.65,0,0.35,1)] opacity-0 translate-x-[80px] scale-95" data-slide="1">
-              <img src="images/pic_2.jpg" 
-                   alt="Research Infrastructure" 
-                   class="w-full h-full object-cover"
-                   onerror="this.src='https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&h=1000&fit=crop'">
-              <!-- Overlays -->
+              <img src="images/pic_2.jpg" alt="Research Infrastructure" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&h=1000&fit=crop'">
               <div class="absolute inset-0 bg-gradient-to-t from-[#0a0e1a]/90 via-[#0a0e1a]/20 to-[#0a0e1a]/40"></div>
               <div class="absolute inset-0 bg-gradient-to-l from-transparent to-[#0a0e1a]/30"></div>
-              <!-- Label -->
               <div class="absolute bottom-8 left-8 right-8">
                 <div class="px-5 py-4 rounded-xl bg-black/40 backdrop-blur-xl border border-white/10">
                   <div class="text-[10px] font-mono text-emerald-300 uppercase tracking-widest mb-1.5">High-Performance</div>
@@ -533,11 +497,9 @@
               </div>
             </div>
 
-            <!-- Frame Border -->
             <div class="absolute inset-0 rounded-2xl border border-white/8 pointer-events-none z-20"></div>
             <div class="absolute inset-0 rounded-2xl gradient-border pointer-events-none z-20"></div>
 
-            <!-- Slide Indicators (bottom-right) -->
             <div class="absolute bottom-8 right-8 flex items-center gap-3 z-30">
               <div class="flex gap-2">
                 <button class="hero-dot w-10 h-1.5 rounded-full bg-brand-400 transition-all duration-500" data-index="0" aria-label="Photo 1"></button>
@@ -545,46 +507,32 @@
               </div>
             </div>
 
-            <!-- Floating Badges -->
             <div class="absolute top-6 right-6 z-30 glass-card rounded-xl px-4 py-3 animate-float" style="animation-delay: 0s;">
-              <div class="flex items-center gap-2">
-                <span class="iconify text-emerald-400" data-icon="mdi:check-circle"></span>
-                <span class="text-xs font-medium text-white">RMSD</span>
-              </div>
+              <div class="flex items-center gap-2"><span class="iconify text-emerald-400" data-icon="mdi:check-circle"></span><span class="text-xs font-medium text-white">RMSD</span></div>
             </div>
             <div class="absolute top-6 left-6 z-30 glass-card rounded-xl px-4 py-3 animate-float" style="animation-delay: 1.5s;">
-              <div class="flex items-center gap-2">
-                <span class="iconify text-brand-400" data-icon="mdi:molecule"></span>
-                <span class="text-xs font-medium text-white">GROMACS</span>
-              </div>
+              <div class="flex items-center gap-2"><span class="iconify text-brand-400" data-icon="mdi:molecule"></span><span class="text-xs font-medium text-white">GROMACS</span></div>
             </div>
             <div class="absolute top-1/2 -translate-y-1/2 -left-6 z-30 glass-card rounded-xl px-4 py-3 animate-float" style="animation-delay: 3s;">
-              <div class="flex items-center gap-2">
-                <span class="iconify text-brand-400" data-icon="mdi:chart-line"></span>
-                <span class="text-xs font-medium text-white">SASA</span>
-              </div>
+              <div class="flex items-center gap-2"><span class="iconify text-brand-400" data-icon="mdi:chart-line"></span><span class="text-xs font-medium text-white">SASA</span></div>
             </div>
             <div class="absolute top-1/2 -translate-y-1/2 -right-6 z-30 glass-card rounded-xl px-4 py-3 animate-float" style="animation-delay: 4.5s;">
-              <div class="flex items-center gap-2">
-                <span class="iconify text-amber-400" data-icon="mdi:vector-polyline"></span>
-                <span class="text-xs font-medium text-white">Distance</span>
-              </div>
+              <div class="flex items-center gap-2"><span class="iconify text-amber-400" data-icon="mdi:vector-polyline"></span><span class="text-xs font-medium text-white">Distance</span></div>
             </div>
-
           </div>
         </div>
 
       </div>
     </div>
 
-    <!-- Scroll indicator -->
     <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-fade-in delay-700">
       <div class="w-6 h-10 rounded-full border-2 border-slate-600 flex justify-center pt-2">
         <div class="w-1 h-2.5 bg-brand-400 rounded-full animate-bounce"></div>
       </div>
     </div>
   </section>
-  <!-- ===== ABOUT ===== -->
+
+  <!-- ==================== ABOUT ==================== -->
   <section id="about" class="py-24 md:py-32 relative">
     <div class="max-w-7xl mx-auto px-6">
       <div class="grid md:grid-cols-2 gap-16 items-center">
@@ -595,50 +543,30 @@
           </h2>
           <div class="section-divider !mx-0 mb-8"></div>
           <p class="text-slate-400 leading-relaxed mb-6">
-            <strong class="text-white">Insilico Scholars Hub</strong> is a dedicated computational biology service provider 
-            specializing in Molecular Dynamics (MD) simulations. We empower researchers, students, and scientists worldwide 
+            <strong class="text-white">Insilico Scholars Hub</strong> is a dedicated computational biology service provider
+            specializing in Molecular Dynamics (MD) simulations. We empower researchers, students, and scientists worldwide
             with high-quality, publication-ready simulation data and analysis.
           </p>
           <p class="text-slate-400 leading-relaxed mb-8">
-            Our mission is to make advanced MD simulation accessible, affordable, and delivered within tight deadlines — 
+            Our mission is to make advanced MD simulation accessible, affordable, and delivered within tight deadlines —
             without compromising on scientific rigor or output quality.
           </p>
           <div class="grid grid-cols-2 gap-4">
             <div class="glass-card rounded-xl p-4 flex items-center gap-3">
-              <div class="w-10 h-10 rounded-lg bg-emerald-500/10 flex items-center justify-center shrink-0">
-                <span class="iconify text-emerald-400 text-xl" data-icon="mdi:shield-check"></span>
-              </div>
-              <div>
-                <div class="text-sm font-semibold text-white">Quality Assured</div>
-                <div class="text-xs text-slate-500">Peer-review standard</div>
-              </div>
+              <div class="w-10 h-10 rounded-lg bg-emerald-500/10 flex items-center justify-center shrink-0"><span class="iconify text-emerald-400 text-xl" data-icon="mdi:shield-check"></span></div>
+              <div><div class="text-sm font-semibold text-white">Quality Assured</div><div class="text-xs text-slate-500">Peer-review standard</div></div>
             </div>
             <div class="glass-card rounded-xl p-4 flex items-center gap-3">
-              <div class="w-10 h-10 rounded-lg bg-brand-500/10 flex items-center justify-center shrink-0">
-                <span class="iconify text-brand-400 text-xl" data-icon="mdi:clock-fast"></span>
-              </div>
-              <div>
-                <div class="text-sm font-semibold text-white">Fast Turnaround</div>
-                <div class="text-xs text-slate-500">10-day delivery</div>
-              </div>
+              <div class="w-10 h-10 rounded-lg bg-brand-500/10 flex items-center justify-center shrink-0"><span class="iconify text-brand-400 text-xl" data-icon="mdi:clock-fast"></span></div>
+              <div><div class="text-sm font-semibold text-white">Fast Turnaround</div><div class="text-xs text-slate-500">10-day delivery</div></div>
             </div>
             <div class="glass-card rounded-xl p-4 flex items-center gap-3">
-              <div class="w-10 h-10 rounded-lg bg-amber-500/10 flex items-center justify-center shrink-0">
-                <span class="iconify text-amber-400 text-xl" data-icon="mdi:currency-usd-off"></span>
-              </div>
-              <div>
-                <div class="text-sm font-semibold text-white">Affordable</div>
-                <div class="text-xs text-slate-500">Student-friendly pricing</div>
-              </div>
+              <div class="w-10 h-10 rounded-lg bg-amber-500/10 flex items-center justify-center shrink-0"><span class="iconify text-amber-400 text-xl" data-icon="mdi:currency-usd-off"></span></div>
+              <div><div class="text-sm font-semibold text-white">Affordable</div><div class="text-xs text-slate-500">Student-friendly pricing</div></div>
             </div>
             <div class="glass-card rounded-xl p-4 flex items-center gap-3">
-              <div class="w-10 h-10 rounded-lg bg-purple-500/10 flex items-center justify-center shrink-0">
-                <span class="iconify text-purple-400 text-xl" data-icon="mdi:school"></span>
-              </div>
-              <div>
-                <div class="text-sm font-semibold text-white">Expert Team</div>
-                <div class="text-xs text-slate-500">Experienced researchers</div>
-              </div>
+              <div class="w-10 h-10 rounded-lg bg-purple-500/10 flex items-center justify-center shrink-0"><span class="iconify text-purple-400 text-xl" data-icon="mdi:school"></span></div>
+              <div><div class="text-sm font-semibold text-white">Expert Team</div><div class="text-xs text-slate-500">Experienced researchers</div></div>
             </div>
           </div>
         </div>
@@ -669,13 +597,8 @@
             </div>
             <div class="absolute -bottom-6 -left-6 glass-card rounded-xl px-5 py-4 animate-float" style="animation-delay: 1s;">
               <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-full bg-emerald-500/20 flex items-center justify-center">
-                  <span class="iconify text-emerald-400 text-xl" data-icon="mdi:check-decagram"></span>
-                </div>
-                <div>
-                  <div class="text-sm font-semibold text-white">500ns Complete</div>
-                  <div class="text-xs text-slate-500">All analyses ready</div>
-                </div>
+                <div class="w-10 h-10 rounded-full bg-emerald-500/20 flex items-center justify-center"><span class="iconify text-emerald-400 text-xl" data-icon="mdi:check-decagram"></span></div>
+                <div><div class="text-sm font-semibold text-white">500ns Complete</div><div class="text-xs text-slate-500">All analyses ready</div></div>
               </div>
             </div>
           </div>
@@ -684,7 +607,7 @@
     </div>
   </section>
 
-    <!-- ===== SERVICES ===== -->
+  <!-- ==================== SERVICES ==================== -->
   <section id="services" class="py-24 md:py-32 relative">
     <div class="absolute inset-0 bg-gradient-to-b from-transparent via-brand-950/20 to-transparent pointer-events-none"></div>
     <div class="max-w-7xl mx-auto px-6 relative z-10">
@@ -695,7 +618,7 @@
         <p class="text-slate-400 mt-6 max-w-2xl mx-auto">Comprehensive MD simulation services tailored for research publications, thesis work, and drug discovery projects.</p>
       </div>
 
-      <!-- Row 1: Protein Simulation Video -->
+      <!-- Row 1 -->
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
         <div class="glass-card rounded-2xl p-1 reveal hover:shadow-lg hover:shadow-brand-500/10 transition-all duration-300 lg:col-span-2">
           <div class="flex items-center gap-3 mb-4 p-5 pb-0">
@@ -708,13 +631,9 @@
               <span class="text-[10px] font-mono text-brand-300 uppercase tracking-wider">GROMACS • 100ns</span>
             </div>
           </div>
-          <p class="text-sm text-slate-400 leading-relaxed mt-4 px-5 pb-5">
-            Watch a real-time visualization of protein dynamics. This 100ns simulation demonstrates 
-            conformational changes, binding stability, and molecular interactions.
-          </p>
+          <p class="text-sm text-slate-400 leading-relaxed mt-4 px-5 pb-5">Watch a real-time visualization of protein dynamics. This 100ns simulation demonstrates conformational changes, binding stability, and molecular interactions.</p>
         </div>
 
-        <!-- Types of Projects Card -->
         <div class="glass-card rounded-2xl p-6 reveal hover:shadow-lg hover:shadow-brand-500/10 transition-all duration-300">
           <div class="flex items-center gap-3 mb-4">
             <div class="analysis-icon"><span class="iconify" data-icon="mdi:flask-outline"></span></div>
@@ -738,14 +657,11 @@
               <div class="absolute bottom-2 left-2 px-2 py-1 rounded bg-black/60 text-[10px] text-white font-mono">Vector</div>
             </div>
           </div>
-          <p class="text-sm text-slate-400 leading-relaxed">
-            We handle diverse computational biology projects — from nano-medicine to vaccine design.
-          </p>
+          <p class="text-sm text-slate-400 leading-relaxed">We handle diverse computational biology projects — from nano-medicine to vaccine design.</p>
         </div>
       </div>
-      <!-- ✅ Row 1 Grid Closed -->
 
-      <!-- Row 2: Nanotube Simulation Video -->
+      <!-- Row 2 -->
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
         <div class="glass-card rounded-2xl p-1 reveal hover:shadow-lg hover:shadow-brand-500/10 transition-all duration-300 lg:col-span-2">
           <div class="flex items-center gap-3 mb-4 p-5 pb-0">
@@ -758,13 +674,9 @@
               <span class="text-[10px] font-mono text-brand-300 uppercase tracking-wider">GROMACS • CNT</span>
             </div>
           </div>
-          <p class="text-sm text-slate-400 leading-relaxed mt-4 px-5 pb-5">
-            Carbon nanotube molecular dynamics simulation showing structural dynamics, 
-            water permeation, and nano-channel behavior for drug delivery applications.
-          </p>
+          <p class="text-sm text-slate-400 leading-relaxed mt-4 px-5 pb-5">Carbon nanotube molecular dynamics simulation showing structural dynamics, water permeation, and nano-channel behavior for drug delivery applications.</p>
         </div>
 
-        <!-- Quick Stats Card (fills the right column) -->
         <div class="glass-card rounded-2xl p-6 reveal hover:shadow-lg hover:shadow-brand-500/10 transition-all duration-300 flex flex-col justify-between">
           <div>
             <div class="flex items-center gap-3 mb-6">
@@ -772,41 +684,21 @@
             </div>
             <h3 class="text-lg font-semibold text-white mb-6">Delivery Includes</h3>
             <div class="space-y-4">
-              <div class="flex items-center gap-3">
-                <span class="iconify text-emerald-400 text-lg shrink-0" data-icon="mdi:check-circle"></span>
-                <span class="text-sm text-slate-400">300 DPI Publication Plots</span>
-              </div>
-              <div class="flex items-center gap-3">
-                <span class="iconify text-emerald-400 text-lg shrink-0" data-icon="mdi:check-circle"></span>
-                <span class="text-sm text-slate-400">PNG, PDF & SVG Formats</span>
-              </div>
-              <div class="flex items-center gap-3">
-                <span class="iconify text-emerald-400 text-lg shrink-0" data-icon="mdi:check-circle"></span>
-                <span class="text-sm text-slate-400">Raw Data Files (.xvg)</span>
-              </div>
-              <div class="flex items-center gap-3">
-                <span class="iconify text-emerald-400 text-lg shrink-0" data-icon="mdi:check-circle"></span>
-                <span class="text-sm text-slate-400">Detailed Analysis Report</span>
-              </div>
-              <div class="flex items-center gap-3">
-                <span class="iconify text-emerald-400 text-lg shrink-0" data-icon="mdi:check-circle"></span>
-                <span class="text-sm text-slate-400">PyMOL Session Files</span>
-              </div>
-              <div class="flex items-center gap-3">
-                <span class="iconify text-emerald-400 text-lg shrink-0" data-icon="mdi:check-circle"></span>
-                <span class="text-sm text-slate-400">Methodology Documentation</span>
-              </div>
+              <div class="flex items-center gap-3"><span class="iconify text-emerald-400 text-lg shrink-0" data-icon="mdi:check-circle"></span><span class="text-sm text-slate-400">300 DPI Publication Plots</span></div>
+              <div class="flex items-center gap-3"><span class="iconify text-emerald-400 text-lg shrink-0" data-icon="mdi:check-circle"></span><span class="text-sm text-slate-400">PNG, PDF & SVG Formats</span></div>
+              <div class="flex items-center gap-3"><span class="iconify text-emerald-400 text-lg shrink-0" data-icon="mdi:check-circle"></span><span class="text-sm text-slate-400">Raw Data Files (.xvg)</span></div>
+              <div class="flex items-center gap-3"><span class="iconify text-emerald-400 text-lg shrink-0" data-icon="mdi:check-circle"></span><span class="text-sm text-slate-400">Detailed Analysis Report</span></div>
+              <div class="flex items-center gap-3"><span class="iconify text-emerald-400 text-lg shrink-0" data-icon="mdi:check-circle"></span><span class="text-sm text-slate-400">PyMOL Session Files</span></div>
+              <div class="flex items-center gap-3"><span class="iconify text-emerald-400 text-lg shrink-0" data-icon="mdi:check-circle"></span><span class="text-sm text-slate-400">Methodology Documentation</span></div>
             </div>
           </div>
           <a href="#analysis" class="btn-outline w-full block text-center text-sm mt-6">View Analysis Types</a>
         </div>
       </div>
-      <!-- ✅ Row 2 Grid Closed -->
-
     </div>
   </section>
 
-  <!-- ===== PROCESS ===== -->
+  <!-- ==================== PROCESS ==================== -->
   <section id="process" class="py-24 md:py-32">
     <div class="max-w-7xl mx-auto px-6">
       <div class="text-center mb-16 reveal">
@@ -819,9 +711,7 @@
         <div class="reveal">
           <div class="glass-card rounded-2xl p-8 h-full relative overflow-hidden">
             <div class="absolute top-4 right-4 text-5xl font-bold text-brand-600/10">01</div>
-            <div class="w-12 h-12 rounded-xl bg-brand-600/10 flex items-center justify-center mb-6">
-              <span class="iconify text-brand-400 text-2xl" data-icon="mdi:message-text-outline"></span>
-            </div>
+            <div class="w-12 h-12 rounded-xl bg-brand-600/10 flex items-center justify-center mb-6"><span class="iconify text-brand-400 text-2xl" data-icon="mdi:message-text-outline"></span></div>
             <h3 class="text-base font-semibold text-white mb-2">Project Inquiry</h3>
             <p class="text-sm text-slate-400 leading-relaxed">Share your protein structure, simulation requirements, and research goals through our contact form.</p>
           </div>
@@ -829,9 +719,7 @@
         <div class="reveal delay-100">
           <div class="glass-card rounded-2xl p-8 h-full relative overflow-hidden">
             <div class="absolute top-4 right-4 text-5xl font-bold text-brand-600/10">02</div>
-            <div class="w-12 h-12 rounded-xl bg-emerald-600/10 flex items-center justify-center mb-6">
-              <span class="iconify text-emerald-400 text-2xl" data-icon="mdi:cog-outline"></span>
-            </div>
+            <div class="w-12 h-12 rounded-xl bg-emerald-600/10 flex items-center justify-center mb-6"><span class="iconify text-emerald-400 text-2xl" data-icon="mdi:cog-outline"></span></div>
             <h3 class="text-base font-semibold text-white mb-2">System Setup</h3>
             <p class="text-sm text-slate-400 leading-relaxed">We prepare the system — topology, solvation, ionization, energy minimization, and equilibration.</p>
           </div>
@@ -839,9 +727,7 @@
         <div class="reveal delay-200">
           <div class="glass-card rounded-2xl p-8 h-full relative overflow-hidden">
             <div class="absolute top-4 right-4 text-5xl font-bold text-brand-600/10">03</div>
-            <div class="w-12 h-12 rounded-xl bg-amber-600/10 flex items-center justify-center mb-6">
-              <span class="iconify text-amber-400 text-2xl" data-icon="mdi:play-circle-outline"></span>
-            </div>
+            <div class="w-12 h-12 rounded-xl bg-amber-600/10 flex items-center justify-center mb-6"><span class="iconify text-amber-400 text-2xl" data-icon="mdi:play-circle-outline"></span></div>
             <h3 class="text-base font-semibold text-white mb-2">Production Run</h3>
             <p class="text-sm text-slate-400 leading-relaxed">MD simulation runs on high-performance computing infrastructure for the requested duration (up to 500ns).</p>
           </div>
@@ -849,9 +735,7 @@
         <div class="reveal delay-300">
           <div class="glass-card rounded-2xl p-8 h-full relative overflow-hidden">
             <div class="absolute top-4 right-4 text-5xl font-bold text-brand-600/10">04</div>
-            <div class="w-12 h-12 rounded-xl bg-purple-600/10 flex items-center justify-center mb-6">
-              <span class="iconify text-purple-400 text-2xl" data-icon="mdi:package-variant-closed-check"></span>
-            </div>
+            <div class="w-12 h-12 rounded-xl bg-purple-600/10 flex items-center justify-center mb-6"><span class="iconify text-purple-400 text-2xl" data-icon="mdi:package-variant-closed-check"></span></div>
             <h3 class="text-base font-semibold text-white mb-2">Delivery</h3>
             <p class="text-sm text-slate-400 leading-relaxed">Full analysis package with plots, data files, and detailed report delivered within 10 days.</p>
           </div>
@@ -860,7 +744,7 @@
     </div>
   </section>
 
-    <!-- ===== ANALYSIS ===== -->
+  <!-- ==================== ANALYSIS ==================== -->
   <section id="analysis" class="py-24 md:py-32 relative">
     <div class="absolute inset-0 bg-gradient-to-b from-transparent via-brand-950/10 to-transparent pointer-events-none"></div>
     <div class="max-w-7xl mx-auto px-6 relative z-10">
@@ -873,15 +757,11 @@
 
       <div class="space-y-8">
 
-        <!-- ──── 1. RMSD Analysis ──── -->
+        <!-- 1. RMSD -->
         <div class="glass-card rounded-2xl overflow-hidden reveal">
           <div class="grid md:grid-cols-2">
-            <!-- Image Side -->
             <div class="relative bg-brand-950/40 border-b md:border-b-0 md:border-r border-white/5 overflow-hidden group">
-              <img src="images/RMSD.jpg" 
-                   alt="RMSD Analysis Plot" 
-                   class="w-full h-full min-h-[280px] object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500">
-              <!-- Floating Badge -->
+              <img src="images/RMSD.jpg" alt="RMSD Analysis Plot" class="w-full h-full min-h-[280px] object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500">
               <div class="absolute top-4 left-4 px-3 py-1.5 rounded-lg bg-black/60 backdrop-blur-sm border border-white/10">
                 <span class="text-[10px] font-mono text-brand-300 uppercase tracking-wider">RMSD • Backbone + Cα</span>
               </div>
@@ -891,17 +771,12 @@
                 <span class="px-2 py-1 rounded bg-white/10 text-[10px] font-semibold text-white">SVG</span>
               </div>
             </div>
-            <!-- Info Side -->
             <div class="p-8 flex flex-col justify-center">
               <div class="flex items-center gap-4 mb-4">
-                <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-brand-600/20 to-brand-400/5 border border-brand-600/20 flex items-center justify-center shrink-0">
-                  <span class="iconify text-brand-400 text-2xl" data-icon="mdi:chart-line-variant"></span>
-                </div>
+                <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-brand-600/20 to-brand-400/5 border border-brand-600/20 flex items-center justify-center shrink-0"><span class="iconify text-brand-400 text-2xl" data-icon="mdi:chart-line-variant"></span></div>
                 <h3 class="text-xl font-semibold text-white">RMSD Analysis</h3>
               </div>
-              <p class="text-sm text-slate-400 leading-relaxed mb-5">
-                Measures the average deviation of atomic positions over time, indicating system stability and convergence. Essential for validating that your simulation has reached equilibrium before extracting meaningful data.
-              </p>
+              <p class="text-sm text-slate-400 leading-relaxed mb-5">Measures the average deviation of atomic positions over time, indicating system stability and convergence. Essential for validating that your simulation has reached equilibrium before extracting meaningful data.</p>
               <div class="flex flex-wrap gap-2">
                 <span class="text-[10px] font-mono px-2.5 py-1 rounded-md bg-brand-600/10 text-brand-300 border border-brand-600/20">Backbone RMSD</span>
                 <span class="text-[10px] font-mono px-2.5 py-1 rounded-md bg-brand-600/10 text-brand-300 border border-brand-600/20">Cα RMSD</span>
@@ -912,51 +787,41 @@
           </div>
         </div>
 
-        <!-- ──── 2. RMSF Analysis ──── -->
+        <!-- 2. RMSF -->
         <div class="glass-card rounded-2xl overflow-hidden reveal">
           <div class="grid md:grid-cols-2">
-            <!-- Info Side (left on desktop) -->
             <div class="p-8 flex flex-col justify-center order-2 md:order-1">
               <div class="flex items-center gap-4 mb-4">
-                <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-emerald-600/20 to-emerald-400/5 border border-emerald-600/20 flex items-center justify-center shrink-0">
-                  <span class="iconify text-emerald-400 text-2xl" data-icon="mdi:chart-bar"></span>
-                </div>
+                <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-emerald-600/20 to-emerald-400/5 border border-emerald-600/20 flex items-center justify-center shrink-0"><span class="iconify text-emerald-400 text-2xl" data-icon="mdi:chart-bar"></span></div>
                 <h3 class="text-xl font-semibold text-white">RMSF Analysis</h3>
               </div>
-              <p class="text-sm text-slate-400 leading-relaxed mb-5">
-                Per-residue fluctuation analysis identifying flexible loops, active site residues, and stable core regions. RMSF correlates with B-factors from X-ray crystallography, enabling direct validation of your simulation against experimental data.
-              </p>
+              <p class="text-sm text-slate-400 leading-relaxed mb-5">Per-residue fluctuation analysis identifying flexible loops, active site residues, and stable core regions. RMSF correlates with B-factors from X-ray crystallography, enabling direct validation of your simulation against experimental data.</p>
               <div class="flex flex-wrap gap-2">
                 <span class="text-[10px] font-mono px-2.5 py-1 rounded-md bg-emerald-600/10 text-emerald-300 border border-emerald-600/20">Per-residue RMSF</span>
                 <span class="text-[10px] font-mono px-2.5 py-1 rounded-md bg-emerald-600/10 text-emerald-300 border border-emerald-600/20">B-factor Correlation</span>
                 <span class="text-[10px] font-mono px-2.5 py-1 rounded-md bg-emerald-600/10 text-emerald-300 border border-emerald-600/20">Flexibility Map</span>
               </div>
             </div>
-            <!-- Image Side (right on desktop) -->
             <div class="relative bg-emerald-950/30 border-b md:border-b-0 md:border-l border-white/5 overflow-hidden group order-1 md:order-2">
-              <img src="images/RMSF.jpg" 
-                   alt="RMSF Analysis Plot" 
-                   class="w-full h-full min-h-[280px] object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500">
-              <div class="absolute top-4 left-4 px-3 py-1.5 rounded-lg bg-black/60 backdrop-blur-sm border border-white/10">
-                <span class="text-[10px] font-mono text-emerald-300 uppercase tracking-wider">RMSF • Per-residue</span>
-              </div>
-              <div class="absolute bottom-4 right-4 flex gap-2">
-                <span class="px-2 py-1 rounded bg-emerald-600/80 text-[10px] font-semibold text-white">PNG</span>
-                <span class="px-2 py-1 rounded bg-white/10 text-[10px] font-semibold text-white">PDF</span>
-                <span class="px-2 py-1 rounded bg-white/10 text-[10px] font-semibold text-white">SVG</span>
+              <img src="images/RMSF.jpg" alt="RMSF Analysis Plot" class="w-full h-full min-h-[280px] object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500">
+                <div class="absolute top-4 left-4 px-3 py-1.5 rounded-lg bg-black/60 backdrop-blur-sm border border-white/10">
+                  <span class="text-[10px] font-mono text-emerald-300 uppercase tracking-wider">RMSF • Per-residue</span>
+                </div>
+                <div class="absolute bottom-4 right-4 flex gap-2">
+                  <span class="px-2 py-1 rounded bg-emerald-600/80 text-[10px] font-semibold text-white">PNG</span>
+                  <span class="px-2 py-1 rounded bg-white/10 text-[10px] font-semibold text-white">PDF</span>
+                  <span class="px-2 py-1 rounded bg-white/10 text-[10px] font-semibold text-white">SVG</span>
+                </div>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- ──── 3. Hydrogen Bond ──── -->
+        <!-- 3. H-bond -->
         <div class="glass-card rounded-2xl overflow-hidden reveal">
           <div class="grid md:grid-cols-2">
             <div class="relative bg-pink-950/30 border-b md:border-b-0 md:border-r border-white/5 overflow-hidden group">
-              <img src="images/H-Bond.jpg" 
-                   alt="Hydrogen Bond Analysis Plot" 
-                   class="w-full h-full min-h-[280px] object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"
-                   onerror="this.src='images/H-Bond.jpg'">
+              <img src="images/H-Bond.jpg" alt="Hydrogen Bond Analysis Plot" class="w-full h-full min-h-[280px] object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500">
               <div class="absolute top-4 left-4 px-3 py-1.5 rounded-lg bg-black/60 backdrop-blur-sm border border-white/10">
                 <span class="text-[10px] font-mono text-pink-300 uppercase tracking-wider">H-bonds</span>
               </div>
@@ -968,14 +833,10 @@
             </div>
             <div class="p-8 flex flex-col justify-center">
               <div class="flex items-center gap-4 mb-4">
-                <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-pink-600/20 to-pink-400/5 border border-pink-600/20 flex items-center justify-center shrink-0">
-                  <span class="iconify text-pink-400 text-2xl" data-icon="mdi:atom-variant"></span>
-                </div>
-                <h3 class="text-xl font-semibold text-white">H-bond</h3>
+                <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-pink-600/20 to-pink-400/5 border border-pink-600/20 flex items-center justify-center shrink-0"><span class="iconify text-pink-400 text-2xl" data-icon="mdi:atom-variant"></span></div>
+                <h3 class="text-xl font-semibold text-white">H-bond Analysis</h3>
               </div>
-              <p class="text-sm text-slate-400 leading-relaxed mb-5">
-                Comprehensive analysis showing persistent hydrogen bond occupancy over time, and salt bridge formation. Identifies critical interactions stabilizing protein-ligand or protein-protein complexes.
-              </p>
+              <p class="text-sm text-slate-400 leading-relaxed mb-5">Comprehensive analysis showing persistent hydrogen bond occupancy over time, and salt bridge formation. Identifies critical interactions stabilizing protein-ligand or protein-protein complexes.</p>
               <div class="flex flex-wrap gap-2">
                 <span class="text-[10px] font-mono px-2.5 py-1 rounded-md bg-pink-600/10 text-pink-300 border border-pink-600/20">H-bond Count</span>
                 <span class="text-[10px] font-mono px-2.5 py-1 rounded-md bg-pink-600/10 text-pink-300 border border-pink-600/20">H-bond Occupancy</span>
@@ -986,33 +847,26 @@
           </div>
         </div>
 
-        <!-- ──── 4. Others ──── -->
+        <!-- 4. Rg & Heatmap -->
         <div class="glass-card rounded-2xl overflow-hidden reveal">
           <div class="grid md:grid-cols-2">
             <div class="p-8 flex flex-col justify-center order-2 md:order-1">
               <div class="flex items-center gap-4 mb-4">
-                <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-cyan-600/20 to-cyan-400/5 border border-cyan-600/20 flex items-center justify-center shrink-0">
-                  <span class="iconify text-cyan-400 text-2xl" data-icon="mdi:animation-play-outline"></span>
-                </div>
-                <h3 class="text-xl font-semibold text-white">Rg,Heatmap</h3>
+                <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-cyan-600/20 to-cyan-400/5 border border-cyan-600/20 flex items-center justify-center shrink-0"><span class="iconify text-cyan-400 text-2xl" data-icon="mdi:animation-play-outline"></span></div>
+                <h3 class="text-xl font-semibold text-white">Rg & Heatmap</h3>
               </div>
-              <p class="text-sm text-slate-400 leading-relaxed mb-5">
-                Presentation-quality structural figures for your publication.
-              </p>
+              <p class="text-sm text-slate-400 leading-relaxed mb-5">Radius of gyration, free energy landscape, heatmap analysis — presentation-quality structural figures for your publication.</p>
               <div class="flex flex-wrap gap-2">
-                <span class="text-[10px] font-mono px-2.5 py-1 rounded-md bg-cyan-600/10 text-cyan-300 border border-cyan-600/20">Trajectory Clustering</span>
+                <span class="text-[10px] font-mono px-2.5 py-1 rounded-md bg-cyan-600/10 text-cyan-300 border border-cyan-600/20">Radius of Gyration</span>
+                <span class="text-[10px] font-mono px-2.5 py-1 rounded-md bg-cyan-600/10 text-cyan-300 border border-cyan-600/20">Free Energy Landscape</span>
+                <span class="text-[10px] font-mono px-2.5 py-1 rounded-md bg-cyan-600/10 text-cyan-300 border border-cyan-600/20">Heatmap</span>
                 <span class="text-[10px] font-mono px-2.5 py-1 rounded-md bg-cyan-600/10 text-cyan-300 border border-cyan-600/20">PCA Plots</span>
-                <span class="text-[10px] font-mono px-2.5 py-1 rounded-md bg-cyan-600/10 text-cyan-300 border border-cyan-600/20">PyMOL Session</span>
-                <span class="text-[10px] font-mono px-2.5 py-1 rounded-md bg-cyan-600/10 text-cyan-300 border border-cyan-600/20">Structural Snapshots</span>
               </div>
             </div>
             <div class="relative bg-cyan-950/30 border-b md:border-b-0 md:border-l border-white/5 overflow-hidden group order-1 md:order-2">
-              <img src="images/Heatmap.jpg" 
-                   alt="Others" 
-                   class="w-full h-full min-h-[280px] object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"
-                   onerror="this.src='images/analysis/Others.png'">
+              <img src="images/Heatmap.jpg" alt="Heatmap Analysis" class="w-full h-full min-h-[280px] object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500" onerror="this.src='images/analysis/Others.png'">
               <div class="absolute top-4 left-4 px-3 py-1.5 rounded-lg bg-black/60 backdrop-blur-sm border border-white/10">
-                <span class="text-[10px] font-mono text-cyan-300 uppercase tracking-wider">Free energy landscape, heatmap, etc</span>
+                <span class="text-[10px] font-mono text-cyan-300 uppercase tracking-wider">Free Energy Landscape, Heatmap & More</span>
               </div>
               <div class="absolute bottom-4 right-4 flex gap-2">
                 <span class="px-2 py-1 rounded bg-cyan-600/80 text-[10px] font-semibold text-white">PNG</span>
@@ -1024,20 +878,17 @@
         </div>
 
       </div>
-      <!-- ✅ space-y-8 closed -->
 
-      <!-- Bottom Note -->
       <div class="mt-12 text-center reveal">
         <div class="inline-flex items-center gap-3 px-6 py-3 rounded-xl bg-brand-600/5 border border-brand-600/15">
           <span class="iconify text-brand-400 text-xl" data-icon="mdi:information-outline"></span>
           <span class="text-sm text-slate-400">All plots delivered at <strong class="text-white">300 DPI</strong> in PNG, PDF & SVG formats with proper axis labels and color schemes</span>
         </div>
       </div>
-
     </div>
   </section>
 
-  <!-- ===== PRICING ===== -->
+  <!-- ==================== PRICING ==================== -->
   <section id="pricing" class="py-24 md:py-32">
     <div class="max-w-7xl mx-auto px-6">
       <div class="text-center mb-16 reveal">
@@ -1051,9 +902,7 @@
         <!-- 50ns — $5 -->
         <div class="glass-card rounded-2xl p-8 reveal flex flex-col">
           <div class="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-2">Starter</div>
-          <div class="flex items-baseline gap-1 mb-1">
-            <span class="text-4xl font-bold text-white">$5</span>
-          </div>
+          <div class="flex items-baseline gap-1 mb-1"><span class="text-4xl font-bold text-white">$5</span></div>
           <div class="text-sm text-slate-500 mb-1">50ns Simulation</div>
           <div class="text-[10px] text-slate-600 mb-6">$0.10 per nanosecond</div>
           <div class="h-px bg-white/5 mb-6"></div>
@@ -1067,13 +916,11 @@
           <a href="#contact" class="btn-outline w-full block text-center text-sm">Get Started</a>
         </div>
 
-        <!-- 100ns — $10 ★ Popular -->
+        <!-- 100ns — $10 -->
         <div class="glass-card rounded-2xl p-8 reveal delay-100 flex flex-col relative" style="border-color: rgba(26,109,245,0.3);">
           <div class="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-brand-600 text-xs font-semibold text-white">Popular</div>
           <div class="text-xs font-semibold text-brand-400 uppercase tracking-wider mb-2">Standard</div>
-          <div class="flex items-baseline gap-1 mb-1">
-            <span class="text-4xl font-bold text-white">$10</span>
-          </div>
+          <div class="flex items-baseline gap-1 mb-1"><span class="text-4xl font-bold text-white">$10</span></div>
           <div class="text-sm text-slate-500 mb-1">100ns Simulation</div>
           <div class="text-[10px] text-slate-600 mb-6">$0.10 per nanosecond</div>
           <div class="h-px bg-white/5 mb-6"></div>
@@ -1090,9 +937,7 @@
         <!-- 250ns — $20 -->
         <div class="glass-card rounded-2xl p-8 reveal delay-200 flex flex-col">
           <div class="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-2">Advanced</div>
-          <div class="flex items-baseline gap-1 mb-1">
-            <span class="text-4xl font-bold text-white">$20</span>
-          </div>
+          <div class="flex items-baseline gap-1 mb-1"><span class="text-4xl font-bold text-white">$20</span></div>
           <div class="text-sm text-slate-500 mb-1">250ns Simulation</div>
           <div class="text-[10px] text-slate-600 mb-6">$0.08 per nanosecond</div>
           <div class="h-px bg-white/5 mb-6"></div>
@@ -1109,9 +954,7 @@
         <!-- 500ns — $40 -->
         <div class="glass-card rounded-2xl p-8 reveal delay-300 flex flex-col">
           <div class="text-xs font-semibold text-amber-400 uppercase tracking-wider mb-2">Premium</div>
-          <div class="flex items-baseline gap-1 mb-1">
-            <span class="text-4xl font-bold text-white">$40</span>
-          </div>
+          <div class="flex items-baseline gap-1 mb-1"><span class="text-4xl font-bold text-white">$40</span></div>
           <div class="text-sm text-slate-500 mb-1">500ns Simulation</div>
           <div class="text-[10px] text-slate-600 mb-6">$0.08 per nanosecond</div>
           <div class="h-px bg-white/5 mb-6"></div>
@@ -1127,13 +970,10 @@
 
       </div>
 
-      <!-- Savings Banner -->
       <div class="mt-10 reveal delay-400">
         <div class="rounded-xl p-5 flex flex-col sm:flex-row items-center justify-between gap-4" style="background: linear-gradient(135deg, rgba(26,109,245,0.08), rgba(16,185,129,0.08)); border: 1px solid rgba(26,109,245,0.15);">
           <div class="flex items-center gap-3">
-            <div class="w-10 h-10 rounded-lg bg-emerald-500/15 flex items-center justify-center shrink-0">
-              <span class="iconify text-emerald-400 text-xl" data-icon="mdi:tag-check"></span>
-            </div>
+            <div class="w-10 h-10 rounded-lg bg-emerald-500/15 flex items-center justify-center shrink-0"><span class="iconify text-emerald-400 text-xl" data-icon="mdi:tag-check"></span></div>
             <div>
               <span class="text-sm font-semibold text-white">Save more with longer simulations</span>
               <span class="text-xs text-slate-500 block">250ns & 500ns packages at just $0.08/ns — best value for publications</span>
@@ -1142,11 +982,10 @@
           <a href="#contact" class="btn-primary text-sm !py-2.5 !px-6 shrink-0"><span>Get a Quote</span></a>
         </div>
       </div>
-
     </div>
   </section>
 
-  <!-- ===== TEAM (Leadership) ===== -->
+  <!-- ==================== TEAM (Leadership) ==================== -->
   <section id="team" class="py-24 md:py-32 relative">
     <div class="absolute inset-0 bg-gradient-to-b from-transparent via-brand-950/10 to-transparent pointer-events-none"></div>
     <div class="max-w-7xl mx-auto px-6 relative z-10">
@@ -1201,11 +1040,10 @@
           <p class="text-sm text-slate-500 leading-relaxed">Contributing to research methodology and ensuring client satisfaction across all deliverables.</p>
         </div>
       </div>
-      <!-- ✅ TEAM GRID CLOSED HERE -->
     </div>
   </section>
 
-  <!-- ===== RESEARCH ASSISTANTS ===== -->
+  <!-- ==================== RESEARCH ASSISTANTS ==================== -->
   <section id="research-team" class="py-24 md:py-32 relative">
     <div class="absolute inset-0 bg-gradient-to-b from-transparent via-brand-950/10 to-transparent pointer-events-none"></div>
     <div class="max-w-7xl mx-auto px-6 relative z-10">
@@ -1277,7 +1115,7 @@
           <p class="text-sm text-slate-500 leading-relaxed">Expert in publication figure preparation, color schemes, and journal formatting standards.</p>
         </div>
       </div>
-      <!-- ✅ RESEARCH TEAM GRID CLOSED HERE -->
+
       <div class="text-center mt-12 reveal delay-400">
         <p class="text-sm text-slate-500 mb-4">Interested in joining our research team?</p>
         <a href="#contact" class="btn-outline text-sm">
@@ -1289,7 +1127,7 @@
     </div>
   </section>
 
-  <!-- ===== RESEARCH ECOSYSTEM (Sliding BG) ===== -->
+  <!-- ==================== ECOSYSTEM ==================== -->
   <section id="ecosystem" class="py-24 md:py-32 relative overflow-hidden">
     <div class="absolute inset-0 z-0">
       <div class="sliding-bg-wrapper">
@@ -1407,7 +1245,7 @@
     </div>
   </section>
 
-  <!-- ===== WHY CHOOSE US ===== -->
+  <!-- ==================== WHY CHOOSE US ==================== -->
   <section class="py-24 md:py-32">
     <div class="max-w-7xl mx-auto px-6">
       <div class="grid md:grid-cols-2 gap-12 items-center">
@@ -1484,7 +1322,7 @@
     </div>
   </section>
 
-  <!-- ===== TESTIMONIALS ===== -->
+  <!-- ==================== TESTIMONIALS ==================== -->
   <section class="py-24 md:py-32 relative">
     <div class="absolute inset-0 bg-gradient-to-b from-transparent via-brand-950/10 to-transparent pointer-events-none"></div>
     <div class="max-w-7xl mx-auto px-6 relative z-10">
@@ -1496,7 +1334,11 @@
       <div class="grid md:grid-cols-3 gap-6">
         <div class="glass-card rounded-2xl p-8 reveal">
           <div class="flex gap-1 mb-4">
-            <span class="iconify text-amber-400" data-icon="mdi:star"></span><span class="iconify text-amber-400" data-icon="mdi:star"></span><span class="iconify text-amber-400" data-icon="mdi:star"></span><span class="iconify text-amber-400" data-icon="mdi:star"></span><span class="iconify text-amber-400" data-icon="mdi:star"></span>
+            <span class="iconify text-amber-400" data-icon="mdi:star"></span>
+            <span class="iconify text-amber-400" data-icon="mdi:star"></span>
+            <span class="iconify text-amber-400" data-icon="mdi:star"></span>
+            <span class="iconify text-amber-400" data-icon="mdi:star"></span>
+            <span class="iconify text-amber-400" data-icon="mdi:star"></span>
           </div>
           <p class="text-sm text-slate-400 leading-relaxed mb-6">"Outstanding quality! The RMSD and SASA plots were directly usable in my manuscript. Delivered right on time. Highly recommended for any MD simulation work."</p>
           <div class="flex items-center gap-3 pt-4 border-t border-white/5">
@@ -1506,7 +1348,11 @@
         </div>
         <div class="glass-card rounded-2xl p-8 reveal delay-100">
           <div class="flex gap-1 mb-4">
-            <span class="iconify text-amber-400" data-icon="mdi:star"></span><span class="iconify text-amber-400" data-icon="mdi:star"></span><span class="iconify text-amber-400" data-icon="mdi:star"></span><span class="iconify text-amber-400" data-icon="mdi:star"></span><span class="iconify text-amber-400" data-icon="mdi:star"></span>
+            <span class="iconify text-amber-400" data-icon="mdi:star"></span>
+            <span class="iconify text-amber-400" data-icon="mdi:star"></span>
+            <span class="iconify text-amber-400" data-icon="mdi:star"></span>
+            <span class="iconify text-amber-400" data-icon="mdi:star"></span>
+            <span class="iconify text-amber-400" data-icon="mdi:star"></span>
           </div>
           <p class="text-sm text-slate-400 leading-relaxed mb-6">"As a PhD student, I needed affordable yet high-quality simulation data. Insilico Scholars Hub exceeded my expectations. The detailed report saved me weeks of work."</p>
           <div class="flex items-center gap-3 pt-4 border-t border-white/5">
@@ -1516,7 +1362,10 @@
         </div>
         <div class="glass-card rounded-2xl p-8 reveal delay-200">
           <div class="flex gap-1 mb-4">
-            <span class="iconify text-amber-400" data-icon="mdi:star"></span><span class="iconify text-amber-400" data-icon="mdi:star"></span><span class="iconify text-amber-400" data-icon="mdi:star"></span><span class="iconify text-amber-400" data-icon="mdi:star"></span><span class="iconify text-amber-400" data-icon="mdi:star-half-full"></span>
+            <span class="iconify text-amber-400" data-icon="mdi:star"></span>
+            <span class="iconify text-amber-400" data-icon="mdi:star"></span>
+            <span class="iconify text-amber-400" data-icon="mdi:star"></span>
+            <span class="iconify text-amber-400" data-icon="mdi:star-half-full"></span>
           </div>
           <p class="text-sm text-slate-400 leading-relaxed mb-6">"The atom-contact analysis and hydrogen bond data were exactly what I needed for my drug-protein interaction study. Professional team with fast communication."</p>
           <div class="flex items-center gap-3 pt-4 border-t border-white/5">
@@ -1528,71 +1377,41 @@
     </div>
   </section>
 
-  <!-- ===== CONTACT ===== -->
+  <!-- ==================== CONTACT ==================== -->
   <section id="contact" class="py-24 md:py-32">
     <div class="max-w-7xl mx-auto px-6">
       <div class="grid md:grid-cols-2 gap-12">
-        <!-- Left: Info -->
         <div class="reveal">
           <span class="text-xs font-semibold tracking-widest uppercase text-brand-400 mb-4 block">Get In Touch</span>
           <h2 class="text-3xl md:text-4xl font-bold text-white tracking-tight mb-6">Start Your <span class="gradient-text">Project</span></h2>
           <div class="section-divider !mx-0 mb-8"></div>
           <p class="text-slate-400 leading-relaxed mb-10">Ready to get started? Fill out the form or reach us directly — we'll respond within 24 hours with a quote and timeline.</p>
-          
+
           <div class="space-y-5">
-            <!-- Email -->
             <a href="mailto:insilicoscholarshub@gmail.com" class="flex items-center gap-4 group">
-              <div class="w-12 h-12 rounded-xl bg-brand-600/10 flex items-center justify-center shrink-0 group-hover:bg-brand-600/20 transition-colors">
-                <span class="iconify text-brand-400 text-xl" data-icon="mdi:email-outline"></span>
-              </div>
-              <div>
-                <div class="text-sm font-semibold text-white group-hover:text-brand-400 transition-colors">Email Us</div>
-                <div class="text-sm text-slate-400">insilicoscholarshub@gmail.com</div>
-              </div>
+              <div class="w-12 h-12 rounded-xl bg-brand-600/10 flex items-center justify-center shrink-0 group-hover:bg-brand-600/20 transition-colors"><span class="iconify text-brand-400 text-xl" data-icon="mdi:email-outline"></span></div>
+              <div><div class="text-sm font-semibold text-white group-hover:text-brand-400 transition-colors">Email Us</div><div class="text-sm text-slate-400">insilicoscholarshub@gmail.com</div></div>
             </a>
-            <!-- WhatsApp -->
             <a href="https://wa.me/8801575780459" target="_blank" class="flex items-center gap-4 group">
-              <div class="w-12 h-12 rounded-xl bg-emerald-600/10 flex items-center justify-center shrink-0 group-hover:bg-emerald-600/20 transition-colors">
-                <span class="iconify text-emerald-400 text-xl" data-icon="mdi:whatsapp"></span>
-              </div>
-              <div>
-                <div class="text-sm font-semibold text-white group-hover:text-emerald-400 transition-colors">WhatsApp</div>
-                <div class="text-sm text-slate-400">+880 1575 780459</div>
-              </div>
+              <div class="w-12 h-12 rounded-xl bg-emerald-600/10 flex items-center justify-center shrink-0 group-hover:bg-emerald-600/20 transition-colors"><span class="iconify text-emerald-400 text-xl" data-icon="mdi:whatsapp"></span></div>
+              <div><div class="text-sm font-semibold text-white group-hover:text-emerald-400 transition-colors">WhatsApp</div><div class="text-sm text-slate-400">+880 1575 780459</div></div>
             </a>
-            <!-- Facebook -->
             <a href="https://www.facebook.com/profile.php?id=61575450780121" target="_blank" class="flex items-center gap-4 group">
-              <div class="w-12 h-12 rounded-xl bg-blue-600/10 flex items-center justify-center shrink-0 group-hover:bg-blue-600/20 transition-colors">
-                <span class="iconify text-blue-400 text-xl" data-icon="mdi:facebook"></span>
-              </div>
-              <div>
-                <div class="text-sm font-semibold text-white group-hover:text-blue-400 transition-colors">Facebook Page</div>
-                <div class="text-sm text-slate-400">Insilico Scholars Hub</div>
-              </div>
+              <div class="w-12 h-12 rounded-xl bg-blue-600/10 flex items-center justify-center shrink-0 group-hover:bg-blue-600/20 transition-colors"><span class="iconify text-blue-400 text-xl" data-icon="mdi:facebook"></span></div>
+              <div><div class="text-sm font-semibold text-white group-hover:text-blue-400 transition-colors">Facebook Page</div><div class="text-sm text-slate-400">Insilico Scholars Hub</div></div>
             </a>
-            <!-- Response Time -->
             <div class="flex items-center gap-4">
-              <div class="w-12 h-12 rounded-xl bg-amber-600/10 flex items-center justify-center shrink-0">
-                <span class="iconify text-amber-400 text-xl" data-icon="mdi:clock-outline"></span>
-              </div>
-              <div>
-                <div class="text-sm font-semibold text-white">Response Time</div>
-                <div class="text-sm text-slate-400">Within 24 hours</div>
-              </div>
+              <div class="w-12 h-12 rounded-xl bg-amber-600/10 flex items-center justify-center shrink-0"><span class="iconify text-amber-400 text-xl" data-icon="mdi:clock-outline"></span></div>
+              <div><div class="text-sm font-semibold text-white">Response Time</div><div class="text-sm text-slate-400">Within 24 hours</div></div>
             </div>
           </div>
 
-          <!-- Quick Action Buttons -->
           <div class="flex flex-wrap gap-3 mt-10">
-            <a href="https://wa.me/8801575780459?text=Hi%2C%20I%20want%20to%20know%20about%20MD%20simulation%20services." target="_blank" 
-               class="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-[#25D366] text-white font-semibold text-sm hover:bg-[#20bd5a] transition-all hover:-translate-y-0.5 hover:shadow-lg hover:shadow-emerald-500/20">
-              <span class="iconify text-lg" data-icon="mdi:whatsapp"></span>
-              Chat on WhatsApp
+            <a href="https://wa.me/8801575780459?text=Hi%2C%20I%20want%20to%20know%20about%20MD%20simulation%20services." target="_blank" class="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-[#25D366] text-white font-semibold text-sm hover:bg-[#20bd5a] transition-all hover:-translate-y-0.5 hover:shadow-lg hover:shadow-emerald-500/20">
+              <span class="iconify text-lg" data-icon="mdi:whatsapp"></span> Chat on WhatsApp
             </a>
-            <a href="https://www.facebook.com/profile.php?id=61575450780121" target="_blank" 
-               class="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-[#1877F2] text-white font-semibold text-sm hover:bg-[#166fe5] transition-all hover:-translate-y-0.5 hover:shadow-lg hover:shadow-blue-500/20">
-              <span class="iconify text-lg" data-icon="mdi:facebook"></span>
-              Visit Facebook
+            <a href="https://www.facebook.com/profile.php?id=61575450780121" target="_blank" class="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-[#1877F2] text-white font-semibold text-sm hover:bg-[#166fe5] transition-all hover:-translate-y-0.5 hover:shadow-lg hover:shadow-blue-500/20">
+              <span class="iconify text-lg" data-icon="mdi:facebook"></span> Visit Facebook
             </a>
           </div>
         </div>
@@ -1645,7 +1464,7 @@
                 </span>
               </button>
               <p class="text-[11px] text-slate-600 text-center">
-                <span class="iconify inline align-middle text-emerald-500" data-icon="mdi:whatsapp"></span> 
+                <span class="iconify inline align-middle text-emerald-500" data-icon="mdi:whatsapp"></span>
                 Message will be sent via WhatsApp & Email
               </p>
             </div>
@@ -1655,7 +1474,7 @@
     </div>
   </section>
 
-  <!-- ===== CTA BANNER ===== -->
+  <!-- ==================== CTA BANNER ==================== -->
   <section class="py-20">
     <div class="max-w-5xl mx-auto px-6">
       <div class="reveal">
@@ -1672,14 +1491,12 @@
           </div>
         </div>
       </div>
-    </div>
   </section>
 
-  <!-- ===== FOOTER ===== -->
+  <!-- ==================== FOOTER ==================== -->
   <footer class="border-t border-white/5 py-16">
     <div class="max-w-7xl mx-auto px-6">
       <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
-        <!-- Brand -->
         <div class="lg:col-span-1">
           <a href="#home" class="flex items-center gap-3 mb-4 group">
             <img src="images/logo.jpeg" alt="Insilico Scholars Hub" class="w-9 h-9 object-contain transition-transform group-hover:scale-110" onerror="this.src='https://via.placeholder.com/40?text=Logo'">
@@ -1689,7 +1506,6 @@
             </div>
           </a>
           <p class="text-sm text-slate-500 leading-relaxed mb-4">Professional MD simulation services for researchers worldwide. Quality, speed, and affordability.</p>
-          <!-- Social Links -->
           <div class="flex gap-3">
             <a href="https://www.facebook.com/profile.php?id=61575450780121" target="_blank" class="w-9 h-9 rounded-lg bg-[#1877F2]/10 flex items-center justify-center text-[#1877F2] hover:bg-[#1877F2] hover:text-white transition-all">
               <span class="iconify text-lg" data-icon="mdi:facebook"></span>
@@ -1705,7 +1521,6 @@
             </a>
           </div>
         </div>
-        <!-- Quick Links -->
         <div>
           <h4 class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-4">Quick Links</h4>
           <ul class="space-y-3">
@@ -1715,7 +1530,6 @@
             <li><a href="#pricing" class="text-sm text-slate-500 hover:text-white transition">Pricing</a></li>
           </ul>
         </div>
-        <!-- Analysis -->
         <div>
           <h4 class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-4">Analysis</h4>
           <ul class="space-y-3">
@@ -1725,7 +1539,6 @@
             <li><a href="#analysis" class="text-sm text-slate-500 hover:text-white transition">H-bond Analysis</a></li>
           </ul>
         </div>
-        <!-- Contact -->
         <div>
           <h4 class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-4">Contact</h4>
           <ul class="space-y-3">
@@ -1743,17 +1556,14 @@
     </div>
   </footer>
 
-    <!-- Floating WhatsApp Button -->
-  <a href="https://wa.me/8801575780459?text=Hi%2C%20I%20want%20to%20know%20about%20MD%20simulation%20services." 
-     target="_blank" 
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/8801575780459?text=Hi%2C%20I%20want%20to%20know%20about%20MD%20simulation%20services." target="_blank"
      class="fixed bottom-6 left-6 z-50 w-14 h-14 rounded-full bg-[#25D366] flex items-center justify-center text-white shadow-lg shadow-emerald-500/30 hover:scale-110 hover:shadow-xl hover:shadow-emerald-500/40 transition-all duration-300 group"
      aria-label="Chat on WhatsApp">
     <span class="iconify text-3xl" data-icon="mdi:whatsapp"></span>
-    <!-- Ping -->
     <span class="absolute -top-1 -right-1 w-4 h-4 rounded-full bg-red-500 border-2 border-[#0a0e1a] flex items-center justify-center">
       <span class="text-[8px] font-bold text-white">1</span>
     </span>
-    <!-- Tooltip -->
     <span class="absolute left-full ml-3 px-3 py-2 rounded-lg bg-white/10 backdrop-blur-md border border-white/10 text-xs font-medium text-white whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
       Chat with us!
     </span>
@@ -1767,8 +1577,9 @@
     </div>
   </div>
 
+  <!-- ==================== SCRIPT ==================== -->
   <script>
-    // Mobile Menu
+    // ===== 1. MOBILE MENU =====
     const menuToggle = document.getElementById('menuToggle');
     const mobileMenu = document.getElementById('mobileMenu');
     const menuIcon = document.getElementById('menuIcon');
@@ -1786,7 +1597,7 @@
       });
     });
 
-    // Scroll Reveal
+    // ===== 2. SCROLL REVEAL =====
     const revealElements = document.querySelectorAll('.reveal');
     const revealObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
@@ -1804,7 +1615,7 @@
     }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
     revealElements.forEach(el => revealObserver.observe(el));
 
-    // Navbar scroll
+    // ===== 3. NAVBAR SCROLL =====
     const navbar = document.querySelector('.navbar');
     window.addEventListener('scroll', () => {
       if (window.scrollY > 50) {
@@ -1816,22 +1627,22 @@
       }
     });
 
-    // Active nav
-    const sections = document.querySelectorAll('section[id]');
-    const navLinks = document.querySelectorAll('.nav-link');
+    // ===== 4. ACTIVE NAV LINK =====
+    const allSections = document.querySelectorAll('section[id]');
+    const allNavLinks = document.querySelectorAll('.nav-link');
     window.addEventListener('scroll', () => {
       let current = '';
-      sections.forEach(section => {
+      allSections.forEach(section => {
         const sectionTop = section.offsetTop - 100;
         if (window.scrollY >= sectionTop) current = section.getAttribute('id');
       });
-      navLinks.forEach(link => {
+      allNavLinks.forEach(link => {
         link.style.color = '';
         if (link.getAttribute('href') === '#' + current) link.style.color = '#e2e8f0';
       });
     });
 
-    // Toast
+    // ===== 5. TOAST =====
     function showToast(message) {
       const toast = document.getElementById('toast');
       document.getElementById('toastMessage').textContent = message;
@@ -1839,35 +1650,28 @@
       setTimeout(() => toast.classList.remove('show'), 4000);
     }
 
-    // ===== CONTACT FORM — WhatsApp + Email =====
+    // ===== 6. CONTACT FORM — WHATSAPP + EMAIL =====
     document.getElementById('contactForm').addEventListener('submit', (e) => {
       e.preventDefault();
-
       const name = document.getElementById('formName').value.trim();
       const email = document.getElementById('formEmail').value.trim();
       const phone = document.getElementById('formPhone').value.trim();
       const duration = document.getElementById('formDuration').value;
       const details = document.getElementById('formDetails').value.trim();
-
-      // Get checked analyses
       const analyses = [];
       document.querySelectorAll('.cb-analysis:checked').forEach(cb => analyses.push(cb.value));
       const analysisStr = analyses.length > 0 ? analyses.join(', ') : 'Not specified';
 
-      // Build WhatsApp message
       const waMessage = encodeURIComponent(
-        '🔬 *New Inquiry — Insilico Scholars Hub*\n\n' +
-        '👤 *Name:* ' + name + '\n' +
-        '📧 *Email:* ' + email + '\n' +
-        '📱 *WhatsApp:* ' + (phone || 'Not provided') + '\n' +
-        '⏱ *Duration:* ' + (duration || 'Not specified') + '\n' +
-        '📊 *Analysis:* ' + analysisStr + '\n' +
-        '📝 *Details:* ' + details
+        '\uD83D\uDD2C *New Inquiry \u2014 Insilico Scholars Hub*\n\n' +
+        '\uD83D\uDC64 *Name:* ' + name + '\n' +
+        '\uD83D\uDCF7 *Email:* ' + email + '\n' +
+        '\uD83D\uDCF1 *WhatsApp:* ' + (phone || 'Not provided') + '\n' +
+        '\u23F1 *Duration:* ' + (duration || 'Not specified') + '\n' +
+        '\uD83D\uDCCA *Analysis:* ' + analysisStr + '\n' +
+        '\uD83D\uDCDD *Details:* ' + details
       );
-
       const waUrl = 'https://wa.me/8801575780459?text=' + waMessage;
-
-      // Build email subject & body
       const emailSubject = encodeURIComponent('New MD Simulation Inquiry from ' + name);
       const emailBody = encodeURIComponent(
         'Name: ' + name + '\n' +
@@ -1879,32 +1683,26 @@
       );
       const mailUrl = 'mailto:insilicoscholarshub@gmail.com?subject=' + emailSubject + '&body=' + emailBody;
 
-      // Show loading
       const btn = e.target.querySelector('button[type="submit"]');
       const originalHTML = btn.innerHTML;
       btn.innerHTML = '<span class="flex items-center justify-center gap-2"><span class="iconify animate-spin" data-icon="mdi:loading"></span> Sending...</span>';
       btn.disabled = true;
 
-      // Open WhatsApp first
       setTimeout(() => {
         window.open(waUrl, '_blank');
-
-        // Then open email client
         setTimeout(() => {
           window.location.href = mailUrl;
-
-          // Reset form & show toast
           setTimeout(() => {
             btn.innerHTML = originalHTML;
             btn.disabled = false;
             e.target.reset();
-            showToast("✅ Inquiry sent via WhatsApp & Email! We'll respond within 24 hours.");
+            showToast("\u2705 Inquiry sent via WhatsApp & Email! We'll respond within 24 hours.");
           }, 500);
         }, 800);
       }, 600);
     });
 
-    // Smooth scroll
+    // ===== 7. SMOOTH SCROLL =====
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function(e) {
         e.preventDefault();
@@ -1913,134 +1711,18 @@
       });
     });
 
-    // Hero Photo Slider
+    // ===== 8. HERO PHOTO SLIDER =====
     (function() {
-      const slides = document.querySelectorAll('.hero-slide');
-      const dots = document.querySelectorAll('.hero-dot');
-      if (slides.length === 0) return;
-      let current = 0;
-      const total = slides.length;
-      const interval = 5000;
-
-      function goTo(index) {
-        slides.forEach((slide, i) => {
-          if (i === index) {
-            slide.style.opacity = '1';
-            slide.style.transform = 'translateX(0) scale(1)';
-            slide.style.zIndex = '10';
-          } else {
-            const direction = i < index ? '-60px' : '60px';
-            slide.style.opacity = '0';
-            slide.style.transform = 'translateX(' + direction + ') scale(0.95)';
-            slide.style.zIndex = '5';
-          }
-        });
-        dots.forEach((dot, i) => {
-          dot.className = i === index 
-            ? 'hero-dot w-8 h-1.5 rounded-full bg-brand-400 transition-all duration-500' 
-            : 'hero-dot w-8 h-1.5 rounded-full bg-white/20 transition-all duration-500';
-        });
-        current = index;
-      }
-
-      function next() { goTo((current + 1) % total); }
-      let timer = setInterval(next, interval);
-      dots.forEach(dot => {
-        dot.addEventListener('click', () => {
-          clearInterval(timer);
-          goTo(parseInt(dot.dataset.index));
-          timer = setInterval(next, interval);
-        });
-      });
-    })();
-
-    // Sliding Background
-    document.addEventListener('DOMContentLoaded', () => {
-      const slides = document.querySelectorAll('.sliding-bg-slide');
-      const dots = document.querySelectorAll('.slide-dot');
-      const progressBar = document.querySelector('.slide-progress');
-      if (!slides.length) return;
+      const heroSlides = document.querySelectorAll('.hero-slide');
+      const heroDots = document.querySelectorAll('.hero-dot');
+      if (heroSlides.length === 0) return;
       let currentSlide = 0;
-      const totalSlides = slides.length;
-      const slideInterval = 8000;
+      const totalHeroSlides = heroSlides.length;
+      const heroInterval = 5000;
 
       function goToSlide(index) {
-        slides.forEach(s => s.classList.remove('active'));
-        dots.forEach(d => d.classList.remove('active'));
-        slides[index].classList.add('active');
-        dots[index].classList.add('active');
-        progressBar.style.width = '0%';
-        progressBar.style.transition = 'none';
-        setTimeout(() => {
-          progressBar.style.transition = 'width ' + slideInterval + 'ms linear';
-          progressBar.style.width = '100%';
-        }, 50);
-        currentSlide = index;
-      }
-
-      function nextSlide() { goToSlide((currentSlide + 1) % totalSlides); }
-      let slideTimer = setInterval(nextSlide, slideInterval);
-      dots.forEach((dot, index) => {
-        dot.addEventListener('click', () => {
-          clearInterval(slideTimer);
-          goToSlide(index);
-          slideTimer = setInterval(nextSlide, slideInterval);
-        });
-      });
-
-      const ecoSection = document.getElementById('ecosystem');
-      if (ecoSection) {
-        ecoSection.addEventListener('mouseenter', () => clearInterval(slideTimer));
-        ecoSection.addEventListener('mouseleave', () => { slideTimer = setInterval(nextSlide, slideInterval); });
-      }
-      progressBar.style.width = '100%';
-    });
-  </script>
-  
-        // ===== HERO PHOTO SLIDER =====
-    (function() {
-      const slides = document.querySelectorAll('.hero-slide');
-      const dots = document.querySelectorAll('.hero-dot');
-      if (slides.length === 0) return;
-
-      let current = 0;
-      const total = slides.length;
-      const interval = 5000;
-
-      function goTo(index) {
-        slides.forEach((slide, i) => {
+        heroSlides.forEach((slide, i) => {
           if (i === index) {
             slide.style.opacity = '1';
             slide.style.transform = 'translateX(0) scale(1)';
             slide.style.zIndex = '10';
-          } else {
-            const direction = i < index ? '-60px' : '60px';
-            slide.style.opacity = '0';
-            slide.style.transform = 'translateX(' + direction + ') scale(0.95)';
-            slide.style.zIndex = '5';
-          }
-        });
-        dots.forEach((dot, i) => {
-          dot.className = i === index 
-            ? 'hero-dot w-8 h-1.5 rounded-full bg-brand-400 transition-all duration-500' 
-            : 'hero-dot w-8 h-1.5 rounded-full bg-white/20 transition-all duration-500';
-        });
-        current = index;
-      }
-
-      function next() { goTo((current + 1) % total); }
-
-      let timer = setInterval(next, interval);
-
-      dots.forEach(dot => {
-        dot.addEventListener('click', () => {
-          clearInterval(timer);
-          goTo(parseInt(dot.dataset.index));
-          timer = setInterval(next, interval);
-        });
-      });
-    })();
-  </script>
-
-</body>
-</html>
