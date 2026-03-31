@@ -624,7 +624,7 @@
     </div>
   </section>
 
-  <!-- ===== SERVICES ===== -->
+    <!-- ===== SERVICES ===== -->
   <section id="services" class="py-24 md:py-32 relative">
     <div class="absolute inset-0 bg-gradient-to-b from-transparent via-brand-950/20 to-transparent pointer-events-none"></div>
     <div class="max-w-7xl mx-auto px-6 relative z-10">
@@ -635,12 +635,12 @@
         <p class="text-slate-400 mt-6 max-w-2xl mx-auto">Comprehensive MD simulation services tailored for research publications, thesis work, and drug discovery projects.</p>
       </div>
 
-      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        <!-- Video Card -->
+      <!-- Row 1: Protein Simulation Video -->
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
         <div class="glass-card rounded-2xl p-1 reveal hover:shadow-lg hover:shadow-brand-500/10 transition-all duration-300 lg:col-span-2">
           <div class="flex items-center gap-3 mb-4 p-5 pb-0">
             <div class="analysis-icon !mb-0"><span class="iconify" data-icon="mdi:play-circle-outline"></span></div>
-            <h3 class="text-lg font-semibold text-white">Live MD Simulation Preview</h3>
+            <h3 class="text-lg font-semibold text-white">Protein MD Simulation</h3>
           </div>
           <div class="relative rounded-xl overflow-hidden gradient-border bg-brand-950/30 aspect-video group mx-5">
             <video class="w-full h-full object-cover" src="videos/simulation.mp4" autoplay loop muted playsinline poster="images/video-poster.jpg">Your browser does not support the video tag.</video>
@@ -654,59 +654,95 @@
           </p>
         </div>
 
-         <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        <!-- Video Card -->
-        <div class="glass-card rounded-2xl p-1 reveal hover:shadow-lg hover:shadow-brand-500/10 transition-all duration-300 lg:col-span-2">
-          <div class="flex items-center gap-3 mb-4 p-5 pb-0">
-            <div class="analysis-icon !mb-0"><span class="iconify" data-icon="mdi:play-circle-outline"></span></div>
-            <h3 class="text-lg font-semibold text-white">Live MD Simulation Preview</h3>
-          </div>
-          <div class="relative rounded-xl overflow-hidden gradient-border bg-brand-950/30 aspect-video group mx-5">
-            <video class="w-full h-full object-cover" src="videos/nanotube.mp4" autoplay loop muted playsinline poster="images/video-poster.jpg">Your browser does not support the video tag.</video>
-            <div class="absolute top-4 right-4 px-3 py-1 rounded-full bg-black/60 backdrop-blur-sm border border-white/10">
-              <span class="text-[10px] font-mono text-brand-300 uppercase tracking-wider">GROMACS • 100ns</span>
-            </div>
-          </div>
-          <p class="text-sm text-slate-400 leading-relaxed mt-4 px-5 pb-5">
-            Watch a real-time visualization of protein dynamics. This 100ns simulation demonstrates 
-            conformational changes, binding stability, and molecular interactions.
-          </p>
-        </div>
-
-        <!-- Multi-Analysis Card -->
+        <!-- Types of Projects Card -->
         <div class="glass-card rounded-2xl p-6 reveal hover:shadow-lg hover:shadow-brand-500/10 transition-all duration-300">
           <div class="flex items-center gap-3 mb-4">
-            <div class="analysis-icon"><span class="iconify" data-icon="mdi:chart-multiple"></span></div>
+            <div class="analysis-icon"><span class="iconify" data-icon="mdi:flask-outline"></span></div>
             <h3 class="text-lg font-semibold text-white">Types of Projects</h3>
           </div>
           <div class="grid grid-cols-2 gap-3 mb-4">
             <div class="relative group cursor-pointer overflow-hidden rounded-lg border border-brand-600/20 bg-brand-950/30 aspect-square">
-              <img src="images/analysis/rmsd_plot_1.png" alt="Nano Partical Bsed Projects" class="w-full h-full object-cover opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-300">
+              <img src="images/analysis/rmsd_plot_1.png" alt="Nano Medicine" class="w-full h-full object-cover opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-300">
               <div class="absolute bottom-2 left-2 px-2 py-1 rounded bg-black/60 text-[10px] text-white font-mono">Nano Medicine</div>
             </div>
             <div class="relative group cursor-pointer overflow-hidden rounded-lg border border-emerald-600/20 bg-emerald-950/30 aspect-square">
-              <img src="images/analysis/rmsf_plot_1.png" alt="Molecular Docking Based Projects" class="w-full h-full object-cover opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-300">
+              <img src="images/analysis/rmsf_plot_1.png" alt="Molecular Docking" class="w-full h-full object-cover opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-300">
               <div class="absolute bottom-2 left-2 px-2 py-1 rounded bg-black/60 text-[10px] text-white font-mono">Docking</div>
             </div>
             <div class="relative group cursor-pointer overflow-hidden rounded-lg border border-amber-600/20 bg-amber-950/30 aspect-square">
-              <img src="images/analysis/sasa_plot_1.png" alt="Epitope Based Vaccine Design" class="w-full h-full object-cover opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-300">
+              <img src="images/analysis/sasa_plot_1.png" alt="Vaccine Design" class="w-full h-full object-cover opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-300">
               <div class="absolute bottom-2 left-2 px-2 py-1 rounded bg-black/60 text-[10px] text-white font-mono">Vaccine</div>
             </div>
             <div class="relative group cursor-pointer overflow-hidden rounded-lg border border-purple-600/20 bg-purple-950/30 aspect-square">
-              <img src="images/analysis/distance_plot_1.png" alt="Vector Biology Based Drug Design" class="w-full h-full object-cover opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-300">
+              <img src="images/analysis/distance_plot_1.png" alt="Vector Biology" class="w-full h-full object-cover opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-300">
               <div class="absolute bottom-2 left-2 px-2 py-1 rounded bg-black/60 text-[10px] text-white font-mono">Vector</div>
             </div>
           </div>
-          <button class="w-full py-2 text-xs font-medium text-brand-400 hover:text-brand-300 border border-brand-600/30 rounded-lg hover:bg-brand-600/10 transition flex items-center justify-center gap-2">
-            <span class="iconify" data-icon="mdi:eye-outline"></span> View All Analysis Plots
-          </button>
-          <p class="text-sm text-slate-400 leading-relaxed mt-4">
-            Comprehensive analysis package including RMSD, RMSF, SASA, and distance measurements 
-            with publication-ready 300 DPI plots in PNG, PDF, and SVG formats.
+          <p class="text-sm text-slate-400 leading-relaxed">
+            We handle diverse computational biology projects — from nano-medicine to vaccine design.
           </p>
         </div>
       </div>
-      <!-- ✅ GRID CLOSED HERE -->
+      <!-- ✅ Row 1 Grid Closed -->
+
+      <!-- Row 2: Nanotube Simulation Video -->
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="glass-card rounded-2xl p-1 reveal hover:shadow-lg hover:shadow-brand-500/10 transition-all duration-300 lg:col-span-2">
+          <div class="flex items-center gap-3 mb-4 p-5 pb-0">
+            <div class="analysis-icon !mb-0"><span class="iconify" data-icon="mdi:play-circle-outline"></span></div>
+            <h3 class="text-lg font-semibold text-white">Carbon Nanotube Simulation</h3>
+          </div>
+          <div class="relative rounded-xl overflow-hidden gradient-border bg-brand-950/30 aspect-video group mx-5">
+            <video class="w-full h-full object-cover" src="videos/nanotube.mp4" autoplay loop muted playsinline poster="images/video-poster.jpg">Your browser does not support the video tag.</video>
+            <div class="absolute top-4 right-4 px-3 py-1 rounded-full bg-black/60 backdrop-blur-sm border border-white/10">
+              <span class="text-[10px] font-mono text-brand-300 uppercase tracking-wider">GROMACS • CNT</span>
+            </div>
+          </div>
+          <p class="text-sm text-slate-400 leading-relaxed mt-4 px-5 pb-5">
+            Carbon nanotube molecular dynamics simulation showing structural dynamics, 
+            water permeation, and nano-channel behavior for drug delivery applications.
+          </p>
+        </div>
+
+        <!-- Quick Stats Card (fills the right column) -->
+        <div class="glass-card rounded-2xl p-6 reveal hover:shadow-lg hover:shadow-brand-500/10 transition-all duration-300 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-3 mb-6">
+              <div class="analysis-icon"><span class="iconify" data-icon="mdi:chart-multiple"></span></div>
+            </div>
+            <h3 class="text-lg font-semibold text-white mb-6">Delivery Includes</h3>
+            <div class="space-y-4">
+              <div class="flex items-center gap-3">
+                <span class="iconify text-emerald-400 text-lg shrink-0" data-icon="mdi:check-circle"></span>
+                <span class="text-sm text-slate-400">300 DPI Publication Plots</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <span class="iconify text-emerald-400 text-lg shrink-0" data-icon="mdi:check-circle"></span>
+                <span class="text-sm text-slate-400">PNG, PDF & SVG Formats</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <span class="iconify text-emerald-400 text-lg shrink-0" data-icon="mdi:check-circle"></span>
+                <span class="text-sm text-slate-400">Raw Data Files (.xvg)</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <span class="iconify text-emerald-400 text-lg shrink-0" data-icon="mdi:check-circle"></span>
+                <span class="text-sm text-slate-400">Detailed Analysis Report</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <span class="iconify text-emerald-400 text-lg shrink-0" data-icon="mdi:check-circle"></span>
+                <span class="text-sm text-slate-400">PyMOL Session Files</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <span class="iconify text-emerald-400 text-lg shrink-0" data-icon="mdi:check-circle"></span>
+                <span class="text-sm text-slate-400">Methodology Documentation</span>
+              </div>
+            </div>
+          </div>
+          <a href="#analysis" class="btn-outline w-full block text-center text-sm mt-6">View Analysis Types</a>
+        </div>
+      </div>
+      <!-- ✅ Row 2 Grid Closed -->
+
     </div>
   </section>
 
