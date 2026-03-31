@@ -1532,64 +1532,122 @@
   <section id="contact" class="py-24 md:py-32">
     <div class="max-w-7xl mx-auto px-6">
       <div class="grid md:grid-cols-2 gap-12">
+        <!-- Left: Info -->
         <div class="reveal">
           <span class="text-xs font-semibold tracking-widest uppercase text-brand-400 mb-4 block">Get In Touch</span>
           <h2 class="text-3xl md:text-4xl font-bold text-white tracking-tight mb-6">Start Your <span class="gradient-text">Project</span></h2>
           <div class="section-divider !mx-0 mb-8"></div>
-          <p class="text-slate-400 leading-relaxed mb-10">Ready to get started? Fill out the form with your project details and we'll get back to you within 24 hours with a quote and timeline.</p>
-          <div class="space-y-6">
+          <p class="text-slate-400 leading-relaxed mb-10">Ready to get started? Fill out the form or reach us directly — we'll respond within 24 hours with a quote and timeline.</p>
+          
+          <div class="space-y-5">
+            <!-- Email -->
+            <a href="mailto:insilicoscholarshub@gmail.com" class="flex items-center gap-4 group">
+              <div class="w-12 h-12 rounded-xl bg-brand-600/10 flex items-center justify-center shrink-0 group-hover:bg-brand-600/20 transition-colors">
+                <span class="iconify text-brand-400 text-xl" data-icon="mdi:email-outline"></span>
+              </div>
+              <div>
+                <div class="text-sm font-semibold text-white group-hover:text-brand-400 transition-colors">Email Us</div>
+                <div class="text-sm text-slate-400">insilicoscholarshub@gmail.com</div>
+              </div>
+            </a>
+            <!-- WhatsApp -->
+            <a href="https://wa.me/8801575780459" target="_blank" class="flex items-center gap-4 group">
+              <div class="w-12 h-12 rounded-xl bg-emerald-600/10 flex items-center justify-center shrink-0 group-hover:bg-emerald-600/20 transition-colors">
+                <span class="iconify text-emerald-400 text-xl" data-icon="mdi:whatsapp"></span>
+              </div>
+              <div>
+                <div class="text-sm font-semibold text-white group-hover:text-emerald-400 transition-colors">WhatsApp</div>
+                <div class="text-sm text-slate-400">+880 1575 780459</div>
+              </div>
+            </a>
+            <!-- Facebook -->
+            <a href="https://www.facebook.com/profile.php?id=61575450780121" target="_blank" class="flex items-center gap-4 group">
+              <div class="w-12 h-12 rounded-xl bg-blue-600/10 flex items-center justify-center shrink-0 group-hover:bg-blue-600/20 transition-colors">
+                <span class="iconify text-blue-400 text-xl" data-icon="mdi:facebook"></span>
+              </div>
+              <div>
+                <div class="text-sm font-semibold text-white group-hover:text-blue-400 transition-colors">Facebook Page</div>
+                <div class="text-sm text-slate-400">Insilico Scholars Hub</div>
+              </div>
+            </a>
+            <!-- Response Time -->
             <div class="flex items-center gap-4">
-              <div class="w-12 h-12 rounded-xl bg-brand-600/10 flex items-center justify-center shrink-0"><span class="iconify text-brand-400 text-xl" data-icon="mdi:email-outline"></span></div>
-              <div><div class="text-sm font-semibold text-white">Email Us</div><div class="text-sm text-slate-400">insilicoscholarshub@gmail.com</div></div>
-            </div>
-            <div class="flex items-center gap-4">
-              <div class="w-12 h-12 rounded-xl bg-brand-600/10 flex items-center justify-center shrink-0"><span class="iconify text-brand-400 text-xl" data-icon="mdi:whatsapp"></span></div>
-              <div><div class="text-sm font-semibold text-white">WhatsApp</div><div class="text-sm text-slate-400">Message us directly for quick response</div></div>
-            </div>
-            <div class="flex items-center gap-4">
-              <div class="w-12 h-12 rounded-xl bg-brand-600/10 flex items-center justify-center shrink-0"><span class="iconify text-brand-400 text-xl" data-icon="mdi:clock-outline"></span></div>
-              <div><div class="text-sm font-semibold text-white">Response Time</div><div class="text-sm text-slate-400">Within 24 hours</div></div>
+              <div class="w-12 h-12 rounded-xl bg-amber-600/10 flex items-center justify-center shrink-0">
+                <span class="iconify text-amber-400 text-xl" data-icon="mdi:clock-outline"></span>
+              </div>
+              <div>
+                <div class="text-sm font-semibold text-white">Response Time</div>
+                <div class="text-sm text-slate-400">Within 24 hours</div>
+              </div>
             </div>
           </div>
+
+          <!-- Quick Action Buttons -->
+          <div class="flex flex-wrap gap-3 mt-10">
+            <a href="https://wa.me/8801575780459?text=Hi%2C%20I%20want%20to%20know%20about%20MD%20simulation%20services." target="_blank" 
+               class="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-[#25D366] text-white font-semibold text-sm hover:bg-[#20bd5a] transition-all hover:-translate-y-0.5 hover:shadow-lg hover:shadow-emerald-500/20">
+              <span class="iconify text-lg" data-icon="mdi:whatsapp"></span>
+              Chat on WhatsApp
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=61575450780121" target="_blank" 
+               class="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-[#1877F2] text-white font-semibold text-sm hover:bg-[#166fe5] transition-all hover:-translate-y-0.5 hover:shadow-lg hover:shadow-blue-500/20">
+              <span class="iconify text-lg" data-icon="mdi:facebook"></span>
+              Visit Facebook
+            </a>
+          </div>
         </div>
+
+        <!-- Right: Form -->
         <div class="reveal delay-200">
           <form id="contactForm" class="glass-card rounded-2xl p-8 gradient-border">
             <div class="space-y-5">
               <div>
                 <label class="block text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">Full Name *</label>
-                <input type="text" class="form-input" placeholder="Your full name" required>
+                <input type="text" id="formName" class="form-input" placeholder="Your full name" required>
               </div>
               <div>
                 <label class="block text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">Email *</label>
-                <input type="email" class="form-input" placeholder="your@email.com" required>
+                <input type="email" id="formEmail" class="form-input" placeholder="your@email.com" required>
+              </div>
+              <div>
+                <label class="block text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">WhatsApp Number</label>
+                <input type="tel" id="formPhone" class="form-input" placeholder="+880 XXXX XXXXXX" style="appearance:none;">
               </div>
               <div>
                 <label class="block text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">Simulation Duration</label>
-                <select class="form-input" style="appearance:none;cursor:pointer;">
+                <select id="formDuration" class="form-input" style="appearance:none;cursor:pointer;">
                   <option value="" style="background:#0f172a;">Select duration</option>
-                  <option value="50ns" style="background:#0f172a;">50ns — Starter</option>
-                  <option value="100ns" style="background:#0f172a;">100ns — Standard</option>
-                  <option value="250ns" style="background:#0f172a;">250ns — Advanced</option>
-                  <option value="500ns" style="background:#0f172a;">500ns — Premium</option>
-                  <option value="custom" style="background:#0f172a;">Custom Duration</option>
+                  <option value="50ns — $5" style="background:#0f172a;">50ns — Starter ($5)</option>
+                  <option value="100ns — $10" style="background:#0f172a;">100ns — Standard ($10)</option>
+                  <option value="250ns — $20" style="background:#0f172a;">250ns — Advanced ($20)</option>
+                  <option value="500ns — $40" style="background:#0f172a;">500ns — Premium ($40)</option>
+                  <option value="Custom" style="background:#0f172a;">Custom Duration</option>
                 </select>
               </div>
               <div>
                 <label class="block text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">Analysis Required</label>
                 <div class="grid grid-cols-2 gap-3">
-                  <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox" class="w-4 h-4 rounded accent-blue-500"><span class="text-sm text-slate-400">RMSD</span></label>
-                  <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox" class="w-4 h-4 rounded accent-blue-500"><span class="text-sm text-slate-400">RMSF</span></label>
-                  <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox" class="w-4 h-4 rounded accent-blue-500"><span class="text-sm text-slate-400">SASA</span></label>
-                  <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox" class="w-4 h-4 rounded accent-blue-500"><span class="text-sm text-slate-400">Distance</span></label>
-                  <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox" class="w-4 h-4 rounded accent-blue-500"><span class="text-sm text-slate-400">Atom-Contact</span></label>
-                  <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox" class="w-4 h-4 rounded accent-blue-500"><span class="text-sm text-slate-400">Full Report</span></label>
+                  <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox" class="w-4 h-4 rounded accent-blue-500 cb-analysis" value="RMSD"><span class="text-sm text-slate-400">RMSD</span></label>
+                  <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox" class="w-4 h-4 rounded accent-blue-500 cb-analysis" value="RMSF"><span class="text-sm text-slate-400">RMSF</span></label>
+                  <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox" class="w-4 h-4 rounded accent-blue-500 cb-analysis" value="SASA"><span class="text-sm text-slate-400">SASA</span></label>
+                  <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox" class="w-4 h-4 rounded accent-blue-500 cb-analysis" value="Distance"><span class="text-sm text-slate-400">Distance</span></label>
+                  <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox" class="w-4 h-4 rounded accent-blue-500 cb-analysis" value="H-bond"><span class="text-sm text-slate-400">H-bond</span></label>
+                  <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox" class="w-4 h-4 rounded accent-blue-500 cb-analysis" value="Full Report"><span class="text-sm text-slate-400">Full Report</span></label>
                 </div>
               </div>
               <div>
                 <label class="block text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">Project Details *</label>
-                <textarea class="form-input" placeholder="Describe your protein, research goal, and any specific requirements..." required></textarea>
+                <textarea id="formDetails" class="form-input" placeholder="Describe your protein, research goal, and any specific requirements..." required></textarea>
               </div>
-              <button type="submit" class="btn-primary w-full"><span class="flex items-center justify-center gap-2"><span class="iconify" data-icon="mdi:send"></span> Submit Inquiry</span></button>
+              <button type="submit" class="btn-primary w-full">
+                <span class="flex items-center justify-center gap-2">
+                  <span class="iconify" data-icon="mdi:send"></span> Send Inquiry
+                </span>
+              </button>
+              <p class="text-[11px] text-slate-600 text-center">
+                <span class="iconify inline align-middle text-emerald-500" data-icon="mdi:whatsapp"></span> 
+                Message will be sent via WhatsApp & Email
+              </p>
             </div>
           </form>
         </div>
@@ -1621,6 +1679,7 @@
   <footer class="border-t border-white/5 py-16">
     <div class="max-w-7xl mx-auto px-6">
       <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+        <!-- Brand -->
         <div class="lg:col-span-1">
           <a href="#home" class="flex items-center gap-3 mb-4 group">
             <img src="images/logo.jpeg" alt="Insilico Scholars Hub" class="w-9 h-9 object-contain transition-transform group-hover:scale-110" onerror="this.src='https://via.placeholder.com/40?text=Logo'">
@@ -1629,8 +1688,24 @@
               <span class="text-brand-400 text-xs block -mt-0.5 font-medium">Hub</span>
             </div>
           </a>
-          <p class="text-sm text-slate-500 leading-relaxed">Professional MD simulation services for researchers worldwide. Quality, speed, and affordability.</p>
+          <p class="text-sm text-slate-500 leading-relaxed mb-4">Professional MD simulation services for researchers worldwide. Quality, speed, and affordability.</p>
+          <!-- Social Links -->
+          <div class="flex gap-3">
+            <a href="https://www.facebook.com/profile.php?id=61575450780121" target="_blank" class="w-9 h-9 rounded-lg bg-[#1877F2]/10 flex items-center justify-center text-[#1877F2] hover:bg-[#1877F2] hover:text-white transition-all">
+              <span class="iconify text-lg" data-icon="mdi:facebook"></span>
+            </a>
+            <a href="https://wa.me/8801575780459" target="_blank" class="w-9 h-9 rounded-lg bg-[#25D366]/10 flex items-center justify-center text-[#25D366] hover:bg-[#25D366] hover:text-white transition-all">
+              <span class="iconify text-lg" data-icon="mdi:whatsapp"></span>
+            </a>
+            <a href="#" class="w-9 h-9 rounded-lg bg-white/5 flex items-center justify-center text-slate-500 hover:text-white hover:bg-white/10 transition">
+              <span class="iconify text-lg" data-icon="mdi:linkedin"></span>
+            </a>
+            <a href="#" class="w-9 h-9 rounded-lg bg-white/5 flex items-center justify-center text-slate-500 hover:text-white hover:bg-white/10 transition">
+              <span class="iconify text-lg" data-icon="mdi:researchgate"></span>
+            </a>
+          </div>
         </div>
+        <!-- Quick Links -->
         <div>
           <h4 class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-4">Quick Links</h4>
           <ul class="space-y-3">
@@ -1640,27 +1715,25 @@
             <li><a href="#pricing" class="text-sm text-slate-500 hover:text-white transition">Pricing</a></li>
           </ul>
         </div>
+        <!-- Analysis -->
         <div>
           <h4 class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-4">Analysis</h4>
           <ul class="space-y-3">
             <li><a href="#analysis" class="text-sm text-slate-500 hover:text-white transition">RMSD / RMSF</a></li>
             <li><a href="#analysis" class="text-sm text-slate-500 hover:text-white transition">SASA</a></li>
             <li><a href="#analysis" class="text-sm text-slate-500 hover:text-white transition">Distance Analysis</a></li>
-            <li><a href="#analysis" class="text-sm text-slate-500 hover:text-white transition">Atom-Contact</a></li>
+            <li><a href="#analysis" class="text-sm text-slate-500 hover:text-white transition">H-bond Analysis</a></li>
           </ul>
         </div>
+        <!-- Contact -->
         <div>
           <h4 class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-4">Contact</h4>
           <ul class="space-y-3">
-            <li class="text-sm text-slate-500">insilicoscholarshub@gmail.com</li>
+            <li><a href="mailto:insilicoscholarshub@gmail.com" class="text-sm text-slate-500 hover:text-brand-400 transition">insilicoscholarshub@gmail.com</a></li>
+            <li><a href="https://wa.me/8801575780459" target="_blank" class="text-sm text-slate-500 hover:text-emerald-400 transition">+880 1575 780459</a></li>
+            <li><a href="https://www.facebook.com/profile.php?id=61575450780121" target="_blank" class="text-sm text-slate-500 hover:text-blue-400 transition">Facebook Page</a></li>
             <li><a href="#contact" class="text-sm text-brand-400 hover:underline">Send Inquiry</a></li>
           </ul>
-          <div class="flex gap-3 mt-4">
-            <a href="#" class="w-9 h-9 rounded-lg bg-white/5 flex items-center justify-center text-slate-500 hover:text-white hover:bg-white/10 transition"><span class="iconify text-lg" data-icon="mdi:facebook"></span></a>
-            <a href="#" class="w-9 h-9 rounded-lg bg-white/5 flex items-center justify-center text-slate-500 hover:text-white hover:bg-white/10 transition"><span class="iconify text-lg" data-icon="mdi:linkedin"></span></a>
-            <a href="#" class="w-9 h-9 rounded-lg bg-white/5 flex items-center justify-center text-slate-500 hover:text-white hover:bg-white/10 transition"><span class="iconify text-lg" data-icon="mdi:whatsapp"></span></a>
-            <a href="#" class="w-9 h-9 rounded-lg bg-white/5 flex items-center justify-center text-slate-500 hover:text-white hover:bg-white/10 transition"><span class="iconify text-lg" data-icon="mdi:researchgate"></span></a>
-          </div>
         </div>
       </div>
       <div class="border-t border-white/5 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
@@ -1670,6 +1743,22 @@
     </div>
   </footer>
 
+    <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/8801575780459?text=Hi%2C%20I%20want%20to%20know%20about%20MD%20simulation%20services." 
+     target="_blank" 
+     class="fixed bottom-6 left-6 z-50 w-14 h-14 rounded-full bg-[#25D366] flex items-center justify-center text-white shadow-lg shadow-emerald-500/30 hover:scale-110 hover:shadow-xl hover:shadow-emerald-500/40 transition-all duration-300 group"
+     aria-label="Chat on WhatsApp">
+    <span class="iconify text-3xl" data-icon="mdi:whatsapp"></span>
+    <!-- Ping -->
+    <span class="absolute -top-1 -right-1 w-4 h-4 rounded-full bg-red-500 border-2 border-[#0a0e1a] flex items-center justify-center">
+      <span class="text-[8px] font-bold text-white">1</span>
+    </span>
+    <!-- Tooltip -->
+    <span class="absolute left-full ml-3 px-3 py-2 rounded-lg bg-white/10 backdrop-blur-md border border-white/10 text-xs font-medium text-white whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+      Chat with us!
+    </span>
+  </a>
+
   <!-- Toast -->
   <div class="toast" id="toast">
     <div class="flex items-center gap-2">
@@ -1678,7 +1767,6 @@
     </div>
   </div>
 
-  <!-- ===== JAVASCRIPT ===== -->
   <script>
     // Mobile Menu
     const menuToggle = document.getElementById('menuToggle');
@@ -1751,19 +1839,69 @@
       setTimeout(() => toast.classList.remove('show'), 4000);
     }
 
-    // Contact Form
+    // ===== CONTACT FORM — WhatsApp + Email =====
     document.getElementById('contactForm').addEventListener('submit', (e) => {
       e.preventDefault();
+
+      const name = document.getElementById('formName').value.trim();
+      const email = document.getElementById('formEmail').value.trim();
+      const phone = document.getElementById('formPhone').value.trim();
+      const duration = document.getElementById('formDuration').value;
+      const details = document.getElementById('formDetails').value.trim();
+
+      // Get checked analyses
+      const analyses = [];
+      document.querySelectorAll('.cb-analysis:checked').forEach(cb => analyses.push(cb.value));
+      const analysisStr = analyses.length > 0 ? analyses.join(', ') : 'Not specified';
+
+      // Build WhatsApp message
+      const waMessage = encodeURIComponent(
+        '🔬 *New Inquiry — Insilico Scholars Hub*\n\n' +
+        '👤 *Name:* ' + name + '\n' +
+        '📧 *Email:* ' + email + '\n' +
+        '📱 *WhatsApp:* ' + (phone || 'Not provided') + '\n' +
+        '⏱ *Duration:* ' + (duration || 'Not specified') + '\n' +
+        '📊 *Analysis:* ' + analysisStr + '\n' +
+        '📝 *Details:* ' + details
+      );
+
+      const waUrl = 'https://wa.me/8801575780459?text=' + waMessage;
+
+      // Build email subject & body
+      const emailSubject = encodeURIComponent('New MD Simulation Inquiry from ' + name);
+      const emailBody = encodeURIComponent(
+        'Name: ' + name + '\n' +
+        'Email: ' + email + '\n' +
+        'WhatsApp: ' + (phone || 'Not provided') + '\n' +
+        'Duration: ' + (duration || 'Not specified') + '\n' +
+        'Analysis: ' + analysisStr + '\n\n' +
+        'Details:\n' + details
+      );
+      const mailUrl = 'mailto:insilicoscholarshub@gmail.com?subject=' + emailSubject + '&body=' + emailBody;
+
+      // Show loading
       const btn = e.target.querySelector('button[type="submit"]');
       const originalHTML = btn.innerHTML;
       btn.innerHTML = '<span class="flex items-center justify-center gap-2"><span class="iconify animate-spin" data-icon="mdi:loading"></span> Sending...</span>';
       btn.disabled = true;
+
+      // Open WhatsApp first
       setTimeout(() => {
-        btn.innerHTML = originalHTML;
-        btn.disabled = false;
-        e.target.reset();
-        showToast("✅ Inquiry submitted! We'll respond within 24 hours.");
-      }, 2000);
+        window.open(waUrl, '_blank');
+
+        // Then open email client
+        setTimeout(() => {
+          window.location.href = mailUrl;
+
+          // Reset form & show toast
+          setTimeout(() => {
+            btn.innerHTML = originalHTML;
+            btn.disabled = false;
+            e.target.reset();
+            showToast("✅ Inquiry sent via WhatsApp & Email! We'll respond within 24 hours.");
+          }, 500);
+        }, 800);
+      }, 600);
     });
 
     // Smooth scroll
@@ -1775,11 +1913,53 @@
       });
     });
 
+    // Hero Photo Slider
+    (function() {
+      const slides = document.querySelectorAll('.hero-slide');
+      const dots = document.querySelectorAll('.hero-dot');
+      if (slides.length === 0) return;
+      let current = 0;
+      const total = slides.length;
+      const interval = 5000;
+
+      function goTo(index) {
+        slides.forEach((slide, i) => {
+          if (i === index) {
+            slide.style.opacity = '1';
+            slide.style.transform = 'translateX(0) scale(1)';
+            slide.style.zIndex = '10';
+          } else {
+            const direction = i < index ? '-60px' : '60px';
+            slide.style.opacity = '0';
+            slide.style.transform = 'translateX(' + direction + ') scale(0.95)';
+            slide.style.zIndex = '5';
+          }
+        });
+        dots.forEach((dot, i) => {
+          dot.className = i === index 
+            ? 'hero-dot w-8 h-1.5 rounded-full bg-brand-400 transition-all duration-500' 
+            : 'hero-dot w-8 h-1.5 rounded-full bg-white/20 transition-all duration-500';
+        });
+        current = index;
+      }
+
+      function next() { goTo((current + 1) % total); }
+      let timer = setInterval(next, interval);
+      dots.forEach(dot => {
+        dot.addEventListener('click', () => {
+          clearInterval(timer);
+          goTo(parseInt(dot.dataset.index));
+          timer = setInterval(next, interval);
+        });
+      });
+    })();
+
     // Sliding Background
     document.addEventListener('DOMContentLoaded', () => {
       const slides = document.querySelectorAll('.sliding-bg-slide');
       const dots = document.querySelectorAll('.slide-dot');
       const progressBar = document.querySelector('.slide-progress');
+      if (!slides.length) return;
       let currentSlide = 0;
       const totalSlides = slides.length;
       const slideInterval = 8000;
@@ -1799,7 +1979,6 @@
       }
 
       function nextSlide() { goToSlide((currentSlide + 1) % totalSlides); }
-
       let slideTimer = setInterval(nextSlide, slideInterval);
       dots.forEach((dot, index) => {
         dot.addEventListener('click', () => {
@@ -1814,9 +1993,10 @@
         ecoSection.addEventListener('mouseenter', () => clearInterval(slideTimer));
         ecoSection.addEventListener('mouseleave', () => { slideTimer = setInterval(nextSlide, slideInterval); });
       }
-
       progressBar.style.width = '100%';
     });
+  </script>
+  
         // ===== HERO PHOTO SLIDER =====
     (function() {
       const slides = document.querySelectorAll('.hero-slide');
