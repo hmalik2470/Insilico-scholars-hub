@@ -767,7 +767,6 @@
 
     <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
       
-      <!-- Service Card 1: MD Simulation -->
       <!-- Service Card: MD Simulation Video (NEW) -->
 <div class="glass-card rounded-2xl p-1 reveal hover:shadow-lg hover:shadow-brand-500/10 transition-all duration-300 lg:col-span-2">
   <div class="flex items-center gap-3 mb-4">
@@ -802,134 +801,61 @@
   </p>
 </div>
 
-      <!-- Service Card 2: RMSD / RMSF Analysis -->
-      <div class="glass-card rounded-2xl p-6 reveal delay-100 hover:shadow-lg hover:shadow-emerald-500/10 transition-all duration-300">
-        <div class="flex items-center gap-3 mb-4">
-          <div class="analysis-icon" style="background: linear-gradient(135deg, rgba(16,185,129,0.15), rgba(16,185,129,0.05)); border-color: rgba(16,185,129,0.2); color: #34d399;">
-            <span class="iconify" data-icon="mdi:chart-bell-curve-cumulative"></span>
-          </div>
-          <h3 class="text-lg font-semibold text-white">RMSD / RMSF Analysis</h3>
-        </div>
-        
-        <!-- YOUR IMAGE HERE: Replace with your actual RMSD/RMSF plot -->
-        <div class="mb-4 rounded-lg overflow-hidden border border-emerald-600/20 bg-emerald-950/30 aspect-video flex items-center justify-center">
-          <img src="images/analysis/rmsd_rmsf_plot.png" 
-               alt="RMSD RMSF Analysis Plot" 
-               class="w-full h-full object-cover opacity-90 hover:opacity-100 transition-opacity"
-               onerror="this.parentElement.innerHTML='<span class=\'text-xs text-slate-500\'>Image: rmsd_rmsf_plot.png</span>'">
-        </div>
-        
-        <p class="text-sm text-slate-400 leading-relaxed mb-4">
-          Root Mean Square Deviation and Fluctuation analysis with high-resolution publication-quality plots showing protein stability and residue-level flexibility.
-        </p>
-        <div class="pt-3 border-t border-white/5">
-          <span class="text-xs font-mono text-emerald-400/60">.xvg • 300 DPI PNG • PDF</span>
-        </div>
-      </div>
-
-      <!-- Service Card 3: SASA Analysis -->
-      <div class="glass-card rounded-2xl p-6 reveal delay-200 hover:shadow-lg hover:shadow-amber-500/10 transition-all duration-300">
-        <div class="flex items-center gap-3 mb-4">
-          <div class="analysis-icon" style="background: linear-gradient(135deg, rgba(245,158,11,0.15), rgba(245,158,11,0.05)); border-color: rgba(245,158,11,0.2); color: #fbbf24;">
-            <span class="iconify" data-icon="mdi:sphere"></span>
-          </div>
-          <h3 class="text-lg font-semibold text-white">SASA Analysis</h3>
-        </div>
-        
-        <!-- YOUR IMAGE HERE: Replace with your actual SASA plot -->
-        <div class="mb-4 rounded-lg overflow-hidden border border-amber-600/20 bg-amber-950/30 aspect-video flex items-center justify-center">
-          <img src="images/analysis/sasa_plot.png" 
-               alt="SASA Analysis Plot" 
-               class="w-full h-full object-cover opacity-90 hover:opacity-100 transition-opacity"
-               onerror="this.parentElement.innerHTML='<span class=\'text-xs text-slate-500\'>Image: sasa_plot.png</span>'">
-        </div>
-        
-        <p class="text-sm text-slate-400 leading-relaxed mb-4">
-          Solvent Accessible Surface Area analysis to evaluate hydrophobic/hydrophilic surface exposure changes during simulation trajectory.
-        </p>
-        <div class="pt-3 border-t border-white/5">
-          <span class="text-xs font-mono text-amber-400/60">Per-residue • Total SASA • Time-series</span>
-        </div>
-      </div>
-
-      <!-- Service Card 4: Distance Analysis -->
-      <div class="glass-card rounded-2xl p-6 reveal delay-100 hover:shadow-lg hover:shadow-purple-500/10 transition-all duration-300">
-        <div class="flex items-center gap-3 mb-4">
-          <div class="analysis-icon" style="background: linear-gradient(135deg, rgba(168,85,247,0.15), rgba(168,85,247,0.05)); border-color: rgba(168,85,247,0.2); color: #a855f7;">
-            <span class="iconify" data-icon="mdi:arrow-collapse-horizontal"></span>
-          </div>
-          <h3 class="text-lg font-semibold text-white">Distance Analysis</h3>
-        </div>
-        
-        <!-- YOUR IMAGE HERE: Replace with your actual distance analysis plot -->
-        <div class="mb-4 rounded-lg overflow-hidden border border-purple-600/20 bg-purple-950/30 aspect-video flex items-center justify-center">
-          <img src="images/analysis/distance_plot.png" 
-               alt="Distance Analysis Plot" 
-               class="w-full h-full object-cover opacity-90 hover:opacity-100 transition-opacity"
-               onerror="this.parentElement.innerHTML='<span class=\'text-xs text-slate-500\'>Image: distance_plot.png</span>'">
-        </div>
-        
-        <p class="text-sm text-slate-400 leading-relaxed mb-4">
-          Inter-atomic and inter-residue distance measurements throughout the simulation to track conformational changes and binding interactions.
-        </p>
-        <div class="pt-3 border-t border-white/5">
-          <span class="text-xs font-mono text-purple-400/60">Pairwise • COM • Time-series plots</span>
-        </div>
-      </div>
-
-      <!-- Service Card 5: Atom-Contact Analysis -->
-      <div class="glass-card rounded-2xl p-6 reveal delay-200 hover:shadow-lg hover:shadow-pink-500/10 transition-all duration-300">
-        <div class="flex items-center gap-3 mb-4">
-          <div class="analysis-icon" style="background: linear-gradient(135deg, rgba(236,72,153,0.15), rgba(236,72,153,0.05)); border-color: rgba(236,72,153,0.2); color: #ec4899;">
-            <span class="iconify" data-icon="mdi:circle-multiple"></span>
-          </div>
-          <h3 class="text-lg font-semibold text-white">Atom-Contact Analysis</h3>
-        </div>
-        
-        <!-- YOUR IMAGE HERE: Replace with your actual contact map/H-bond plot -->
-        <div class="mb-4 rounded-lg overflow-hidden border border-pink-600/20 bg-pink-950/30 aspect-video flex items-center justify-center">
-          <img src="images/analysis/contact_map_plot.png" 
-               alt="Atom Contact Analysis Plot" 
-               class="w-full h-full object-cover opacity-90 hover:opacity-100 transition-opacity"
-               onerror="this.parentElement.innerHTML='<span class=\'text-xs text-slate-500\'>Image: contact_map_plot.png</span>'">
-        </div>
-        
-        <p class="text-sm text-slate-400 leading-relaxed mb-4">
-          Detailed atomic contact mapping to identify key interacting residues, hydrogen bonds, and hydrophobic contacts during the simulation.
-        </p>
-        <div class="pt-3 border-t border-white/5">
-          <span class="text-xs font-mono text-pink-400/60">H-bonds • Salt bridges • Contact maps</span>
-        </div>
-      </div>
-
-      <!-- Service Card 6: Full Detailed Report -->
-      <div class="glass-card rounded-2xl p-6 reveal delay-300 hover:shadow-lg hover:shadow-cyan-500/10 transition-all duration-300">
-        <div class="flex items-center gap-3 mb-4">
-          <div class="analysis-icon" style="background: linear-gradient(135deg, rgba(6,182,212,0.15), rgba(6,182,212,0.05)); border-color: rgba(6,182,212,0.2); color: #22d3ee;">
-            <span class="iconify" data-icon="mdi:file-document-outline"></span>
-          </div>
-          <h3 class="text-lg font-semibold text-white">Full Detailed Report</h3>
-        </div>
-        
-        <!-- YOUR IMAGE HERE: Replace with sample report page or figure collage -->
-        <div class="mb-4 rounded-lg overflow-hidden border border-cyan-600/20 bg-cyan-950/30 aspect-video flex items-center justify-center">
-          <img src="images/analysis/report_sample.png" 
-               alt="Sample Report Page" 
-               class="w-full h-full object-cover opacity-90 hover:opacity-100 transition-opacity"
-               onerror="this.parentElement.innerHTML='<span class=\'text-xs text-slate-500\'>Image: report_sample.png</span>'">
-        </div>
-        
-        <p class="text-sm text-slate-400 leading-relaxed mb-4">
-          Comprehensive written report with methodology, results interpretation, and figures ready to be included directly in your manuscript or thesis.
-        </p>
-        <div class="pt-3 border-t border-white/5">
-          <span class="text-xs font-mono text-cyan-400/60">PDF • DOCX • LaTeX • Figures</span>
-        </div>
-      </div>
-
+     <!-- Service Card: RMSD/SASA/Distance Analysis with Multiple Images -->
+<div class="glass-card rounded-2xl p-6 reveal hover:shadow-lg hover:shadow-brand-500/10 transition-all duration-300">
+  <div class="flex items-center gap-3 mb-4">
+    <div class="analysis-icon">
+      <span class="iconify" data-icon="mdi:chart-multiple"></span>
+    </div>
+    <h3 class="text-lg font-semibold text-white">Multi-Analysis Package</h3>
+  </div>
+  
+  <!-- Image Grid Gallery -->
+  <div class="grid grid-cols-2 gap-3 mb-4">
+    <!-- Image 1: RMSD -->
+    <div class="relative group cursor-pointer overflow-hidden rounded-lg border border-brand-600/20 bg-brand-950/30 aspect-square">
+      <img src="images/analysis/rmsd_plot_1.png" 
+           alt="RMSD Analysis" 
+           class="w-full h-full object-cover opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-300">
+      <div class="absolute bottom-2 left-2 px-2 py-1 rounded bg-black/60 text-[10px] text-white font-mono">RMSD</div>
+    </div>
+    
+    <!-- Image 2: RMSF -->
+    <div class="relative group cursor-pointer overflow-hidden rounded-lg border border-emerald-600/20 bg-emerald-950/30 aspect-square">
+      <img src="images/analysis/rmsf_plot_1.png" 
+           alt="RMSF Analysis" 
+           class="w-full h-full object-cover opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-300">
+      <div class="absolute bottom-2 left-2 px-2 py-1 rounded bg-black/60 text-[10px] text-white font-mono">RMSF</div>
+    </div>
+    
+    <!-- Image 3: SASA -->
+    <div class="relative group cursor-pointer overflow-hidden rounded-lg border border-amber-600/20 bg-amber-950/30 aspect-square">
+      <img src="images/analysis/sasa_plot_1.png" 
+           alt="SASA Analysis" 
+           class="w-full h-full object-cover opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-300">
+      <div class="absolute bottom-2 left-2 px-2 py-1 rounded bg-black/60 text-[10px] text-white font-mono">SASA</div>
+    </div>
+    
+    <!-- Image 4: Distance -->
+    <div class="relative group cursor-pointer overflow-hidden rounded-lg border border-purple-600/20 bg-purple-950/30 aspect-square">
+      <img src="images/analysis/distance_plot_1.png" 
+           alt="Distance Analysis" 
+           class="w-full h-full object-cover opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-300">
+      <div class="absolute bottom-2 left-2 px-2 py-1 rounded bg-black/60 text-[10px] text-white font-mono">Distance</div>
     </div>
   </div>
-</section>
+  
+  <!-- View All Button -->
+  <button class="w-full py-2 text-xs font-medium text-brand-400 hover:text-brand-300 border border-brand-600/30 rounded-lg hover:bg-brand-600/10 transition flex items-center justify-center gap-2">
+    <span class="iconify" data-icon="mdi:eye-outline"></span>
+    View All Analysis Plots
+  </button>
+  
+  <p class="text-sm text-slate-400 leading-relaxed mt-4">
+    Comprehensive analysis package including RMSD, RMSF, SASA, and distance measurements 
+    with publication-ready 300 DPI plots in PNG, PDF, and SVG formats.
+  </p>
+</div>
 
 
   <!-- ================================================================
